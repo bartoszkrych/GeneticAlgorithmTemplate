@@ -8,7 +8,8 @@ using namespace std;
 #define DEFAULT_VALUES 5
 #define DEFAULT_KNAPSACK 7
 
-CKnapsackProblem::CKnapsackProblem()
+template<class T>
+CKnapsackProblem<T>::CKnapsackProblem()
 {
 	d_knapsack_size = 0;
 	i_items_count = 0;
@@ -16,35 +17,8 @@ CKnapsackProblem::CKnapsackProblem()
 	ppd_items_table = NULL;
 }
 
-CKnapsackProblem::CKnapsackProblem(double dKnapsackSize, int iItemsCount, double dMaxValueItm, double dMaxSizeItm)
-{
-	d_knapsack_size = dKnapsackSize;
-	i_items_count = iItemsCount;
-
-	ppd_items_table = new double*[i_items_count];
-	for (int i = 0; i < i_items_count; i++)
-	{
-		ppd_items_table[i] = new double[2];
-		ppd_items_table[i][0] = dGenerateDouble(0.01, dMaxValueItm);
-		ppd_items_table[i][1] = dGenerateDouble(0.01, dMaxSizeItm);
-	}
-}
-
-CKnapsackProblem::CKnapsackProblem(double dKnapsackSize, int iItemsCount)
-{
-	d_knapsack_size = dKnapsackSize;
-	i_items_count = iItemsCount;
-
-	ppd_items_table = new double*[i_items_count];
-	for (int i = 0; i < i_items_count; i++)
-	{
-		ppd_items_table[i] = new double[2];
-		ppd_items_table[i][0] = dGenerateDouble(0.01, DEFAULT_VALUES);
-		ppd_items_table[i][1] = dGenerateDouble(0.01, DEFAULT_VALUES);
-	}
-}
-
-CKnapsackProblem::~CKnapsackProblem()
+template<class T>
+CKnapsackProblem<T>::~CKnapsackProblem()
 {
 	for(int i = 0; i < i_items_count; i++)
 	{
@@ -54,7 +28,8 @@ CKnapsackProblem::~CKnapsackProblem()
 	delete[] ppd_items_table;
 }
 
-bool CKnapsackProblem::bInitialObject(double dKnapsackSize, int iItemsCount, double dMaxValueItm, double dMaxSizeItm)
+template<class T>
+bool CKnapsackProblem<T>::bInitialObject(double dKnapsackSize, int iItemsCount, double dMaxValueItm, double dMaxSizeItm)
 {
 	if(dMaxSizeItm >= 0.01
 		&& dMaxValueItm >= 0
@@ -76,7 +51,8 @@ bool CKnapsackProblem::bInitialObject(double dKnapsackSize, int iItemsCount, dou
 	return false;
 }
 
-bool CKnapsackProblem::bInitialObject(double dKnapsackSize, int iItemsCount)
+template<class T>
+bool CKnapsackProblem<T>::bInitialObject(double dKnapsackSize, int iItemsCount)
 {
 	if ( iItemsCount > 0
 		&& dKnapsackSize > 0)
@@ -96,7 +72,8 @@ bool CKnapsackProblem::bInitialObject(double dKnapsackSize, int iItemsCount)
 	return  false;
 }
 
-bool CKnapsackProblem::bSetNewValueOfItm(int iIndex, double iValue)
+template<class T>
+bool CKnapsackProblem<T>::bSetNewValueOfItm(int iIndex, double iValue)
 {
 	if (iIndex >= d_knapsack_size || iIndex < 0) return false;
 
@@ -104,7 +81,8 @@ bool CKnapsackProblem::bSetNewValueOfItm(int iIndex, double iValue)
 	return true;
 }
 
-bool CKnapsackProblem::bSetNewSizeOfItm(int iIndex, double iSize)
+template<class T>
+bool CKnapsackProblem<T>::bSetNewSizeOfItm(int iIndex, double iSize)
 {
 	if (iIndex >= d_knapsack_size || iIndex < 0) return false;
 
@@ -112,37 +90,42 @@ bool CKnapsackProblem::bSetNewSizeOfItm(int iIndex, double iSize)
 	return true;
 }
 
-double CKnapsackProblem::dGetValueFromGen(int* piTable)
+template<class T>
+double CKnapsackProblem<T>::dGetValueFromGen(T* piTable)
 {
 	double d_value_gen=0.0;
 	for(int i = 0; i < i_items_count; i++)
 	{
-		if (piTable[i] == 1) d_value_gen += ppd_items_table[i][0];
+		if (piTable[i] != 0) d_value_gen += ppd_items_table[i][0];
 	}
 	return d_value_gen;
 }
 
-double CKnapsackProblem::dGetSizeFromGen(int* piTable)
+template<class T>
+double CKnapsackProblem<T>::dGetSizeFromGen(T* piTable)
 {
 	double d_size_gen = 0.0;
 	for (int i = 0; i < i_items_count; i++)
 	{
-		if (piTable[i] == 1) d_size_gen += ppd_items_table[i][1];
+		if (piTable[i] != 0) d_size_gen += ppd_items_table[i][1];
 	}
 	return d_size_gen;
 }
 
-int CKnapsackProblem::iGetItemsCount()
+template<class T>
+int CKnapsackProblem<T>::iGetItemsCount()
 {
 	return i_items_count;
 }
 
-double CKnapsackProblem::dGetKnapsackSize()
+template<class T>
+double CKnapsackProblem<T>::dGetKnapsackSize()
 {
 	return d_knapsack_size;
 }
 
-void CKnapsackProblem::vDisplay()
+template<class T>
+void CKnapsackProblem<T>::vDisplay()
 {
 	cout << "Capacity:	" << d_knapsack_size << endl <<"Count of items:	"<< i_items_count<<endl<<endl << "i|v	|s"<<endl;
 		for (int j = 0; j < i_items_count; j++)
@@ -152,8 +135,8 @@ void CKnapsackProblem::vDisplay()
 		cout << endl;
 }
 
-
-double CKnapsackProblem::dGenerateDouble(double dFrom, double dTo)
+template<class T>
+double CKnapsackProblem<T>::dGenerateDouble(double dFrom, double dTo)
 {
 	std::random_device rd;  //Will be used to obtain a seed for the random number engine
 	std::mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()
@@ -162,7 +145,8 @@ double CKnapsackProblem::dGenerateDouble(double dFrom, double dTo)
 	return round(dis(gen) * 100) / 100;
 }
 
-int CKnapsackProblem::iGenerateInteger(int iFrom, int iTo)
+template<class T>
+int CKnapsackProblem<T>::iGenerateInteger(int iFrom, int iTo)
 {
 	random_device rd;  //Will be used to obtain a seed for the random number engine
 	mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()

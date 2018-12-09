@@ -1,18 +1,18 @@
 #pragma once
+
+template<class T>
 class CKnapsackProblem
 {
 public:
 	CKnapsackProblem();
-	CKnapsackProblem(double dKnapsackSize, int iItemsCount, double dMaxValueItm, double dMaxSizeItm);
-	CKnapsackProblem(double dKnapsackSize, int iItemsCount);
 	~CKnapsackProblem();
 
 	bool bInitialObject(double dKnapsackSize, int iItemsCount, double dMaxValueItm, double dMaxSizeItm);
 	bool bInitialObject(double dKnapsackSize, int iItemsCount);
 	bool bSetNewValueOfItm(int iIndex, double iValue);
 	bool bSetNewSizeOfItm(int iIndex, double iSize);
-	double dGetValueFromGen(int * piTable);
-	double dGetSizeFromGen(int * piTable);
+	double dGetValueFromGen(T * piTable);
+	double dGetSizeFromGen(T * piTable);
 
 	int iGetItemsCount();
 	double dGetKnapsackSize();
