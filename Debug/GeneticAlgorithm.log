@@ -1,53 +1,16 @@
 ﻿D:\Program Files\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: Katalog pośredni (Debug\) zawiera pliki udostępnione z innego projektu (GeneticAlgorithm.vcxproj). Może to spowodować niepoprawne zachowanie podczas oczyszczania i ponownej kompilacji.
   CGeneticAlgorithm.cpp
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(8): error C2955: „CKnapsackProblem”: użycie klasy klasa szablon wymaga listy argumentów szablon
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(5): note: zobacz deklarację „CKnapsackProblem”
   CIndividual.cpp
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(8): error C2955: „CKnapsackProblem”: użycie klasy klasa szablon wymaga listy argumentów szablon
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(5): note: zobacz deklarację „CKnapsackProblem”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(11): error C2662: "int CKnapsackProblem<T>::iGetItemsCount(void)": nie można konwertować wskaźnika "this" z "CKnapsackProblem" do "CKnapsackProblem<T> &"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(11): note: Przyczyna: nie można skonwertować z "CKnapsackProblem" na "CKnapsackProblem<T>"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(11): note: Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(22): error C2662: "double CKnapsackProblem<T>::dGetSizeFromGen(T *)": nie można konwertować wskaźnika "this" z "CKnapsackProblem" do "CKnapsackProblem<T> &"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(22): note: Przyczyna: nie można skonwertować z "CKnapsackProblem" na "CKnapsackProblem<T>"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(22): note: Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(23): error C2662: "double CKnapsackProblem<T>::dGetValueFromGen(T *)": nie można konwertować wskaźnika "this" z "CKnapsackProblem" do "CKnapsackProblem<T> &"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(23): note: Przyczyna: nie można skonwertować z "CKnapsackProblem" na "CKnapsackProblem<T>"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(23): note: Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(29): error C2662: "int CKnapsackProblem<T>::iGetItemsCount(void)": nie można konwertować wskaźnika "this" z "CKnapsackProblem" do "CKnapsackProblem<T> &"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(29): note: Przyczyna: nie można skonwertować z "CKnapsackProblem" na "CKnapsackProblem<T>"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(29): note: Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(40): error C2662: "double CKnapsackProblem<T>::dGetSizeFromGen(T *)": nie można konwertować wskaźnika "this" z "CKnapsackProblem" do "CKnapsackProblem<T> &"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(40): note: Przyczyna: nie można skonwertować z "CKnapsackProblem" na "CKnapsackProblem<T>"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(40): note: Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(41): error C2662: "double CKnapsackProblem<T>::dGetValueFromGen(T *)": nie można konwertować wskaźnika "this" z "CKnapsackProblem" do "CKnapsackProblem<T> &"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(41): note: Przyczyna: nie można skonwertować z "CKnapsackProblem" na "CKnapsackProblem<T>"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(41): note: Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(61): error C2662: "double CKnapsackProblem<T>::dGetSizeFromGen(T *)": nie można konwertować wskaźnika "this" z "CKnapsackProblem" do "CKnapsackProblem<T> &"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(61): note: Przyczyna: nie można skonwertować z "CKnapsackProblem" na "CKnapsackProblem<T>"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(61): note: Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(62): error C2662: "double CKnapsackProblem<T>::dGetValueFromGen(T *)": nie można konwertować wskaźnika "this" z "CKnapsackProblem" do "CKnapsackProblem<T> &"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(62): note: Przyczyna: nie można skonwertować z "CKnapsackProblem" na "CKnapsackProblem<T>"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(62): note: Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(151): error C2662: "double CKnapsackProblem<T>::dGetSizeFromGen(T *)": nie można konwertować wskaźnika "this" z "CKnapsackProblem" do "CKnapsackProblem<T> &"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(151): note: Przyczyna: nie można skonwertować z "CKnapsackProblem" na "CKnapsackProblem<T>"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(151): note: Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(152): error C2662: "double CKnapsackProblem<T>::dGetValueFromGen(T *)": nie można konwertować wskaźnika "this" z "CKnapsackProblem" do "CKnapsackProblem<T> &"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(152): note: Przyczyna: nie można skonwertować z "CKnapsackProblem" na "CKnapsackProblem<T>"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(152): note: Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(182): error C2662: "double CKnapsackProblem<T>::dGetSizeFromGen(T *)": nie można konwertować wskaźnika "this" z "CKnapsackProblem" do "CKnapsackProblem<T> &"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(182): note: Przyczyna: nie można skonwertować z "CKnapsackProblem" na "CKnapsackProblem<T>"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(182): note: Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(184): error C2662: "double CKnapsackProblem<T>::dGetKnapsackSize(void)": nie można konwertować wskaźnika "this" z "CKnapsackProblem" do "CKnapsackProblem<T> &"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(184): note: Przyczyna: nie można skonwertować z "CKnapsackProblem" na "CKnapsackProblem<T>"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(184): note: Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(184): error C2662: "double CKnapsackProblem<T>::dGetValueFromGen(T *)": nie można konwertować wskaźnika "this" z "CKnapsackProblem" do "CKnapsackProblem<T> &"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(184): note: Przyczyna: nie można skonwertować z "CKnapsackProblem" na "CKnapsackProblem<T>"
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(184): note: Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
   CKnapsackProblem.cpp
   main.cpp
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(8): error C2955: „CKnapsackProblem”: użycie klasy klasa szablon wymaga listy argumentów szablon
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(5): note: zobacz deklarację „CKnapsackProblem”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\main.cpp(29): error C2664: „bool CGeneticAlgorithm::bInitialObject(int,double,double,CKnapsackProblem *)”: nie można dokonać konwersji argumentu 4 z „CKnapsackProblem<int> *” do „CKnapsackProblem *”
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\main.cpp(29): note: Wskazane typy nie są powiązane; konwersja wymaga operatora reinterpret_cast, rzutowania w stylu języka C lub rzutowania w stylu funkcji
   Generowanie kodu...
+main.obj : error LNK2005: Element "public: double __thiscall CKnapsackProblem<int>::dGetSizeFromGen(int *)" (?dGetSizeFromGen@?$CKnapsackProblem@H@@QAENPAH@Z) jest już zdefiniowany w elemencie CKnapsackProblem.obj
+main.obj : error LNK2005: Element "public: double __thiscall CKnapsackProblem<double>::dGetSizeFromGen(double *)" (?dGetSizeFromGen@?$CKnapsackProblem@N@@QAENPAN@Z) jest już zdefiniowany w elemencie CKnapsackProblem.obj
+main.obj : error LNK2005: Element "public: double __thiscall CKnapsackProblem<bool>::dGetSizeFromGen(bool *)" (?dGetSizeFromGen@?$CKnapsackProblem@_N@@QAENPA_N@Z) jest już zdefiniowany w elemencie CKnapsackProblem.obj
+main.obj : error LNK2005: Element "public: double __thiscall CKnapsackProblem<int>::dGetValueFromGen(int *)" (?dGetValueFromGen@?$CKnapsackProblem@H@@QAENPAH@Z) jest już zdefiniowany w elemencie CKnapsackProblem.obj
+main.obj : error LNK2005: Element "public: double __thiscall CKnapsackProblem<double>::dGetValueFromGen(double *)" (?dGetValueFromGen@?$CKnapsackProblem@N@@QAENPAN@Z) jest już zdefiniowany w elemencie CKnapsackProblem.obj
+main.obj : error LNK2005: Element "public: double __thiscall CKnapsackProblem<bool>::dGetValueFromGen(bool *)" (?dGetValueFromGen@?$CKnapsackProblem@_N@@QAENPA_N@Z) jest już zdefiniowany w elemencie CKnapsackProblem.obj
+main.obj : error LNK2019: nierozpoznany zewnętrzny symbol "public: __thiscall CIndividual<int>::CIndividual<int>(class CKnapsackProblem<int> *,double)" (??0?$CIndividual@H@@QAE@PAV?$CKnapsackProblem@H@@N@Z) przywołany w funkcji "public: bool __thiscall CGeneticAlgorithm<int>::bInitialObject(int,double,double,class CKnapsackProblem<int> *)" (?bInitialObject@?$CGeneticAlgorithm@H@@QAE_NHNNPAV?$CKnapsackProblem@H@@@Z)
+main.obj : error LNK2019: nierozpoznany zewnętrzny symbol "public: __thiscall CIndividual<int>::~CIndividual<int>(void)" (??1?$CIndividual@H@@QAE@XZ) przywołany w funkcji "public: void * __thiscall CIndividual<int>::`scalar deleting destructor'(unsigned int)" (??_G?$CIndividual@H@@QAEPAXI@Z)
+main.obj : error LNK2019: nierozpoznany zewnętrzny symbol "public: double __thiscall CIndividual<int>::dGetFitness(void)" (?dGetFitness@?$CIndividual@H@@QAENXZ) przywołany w funkcji "public: bool __thiscall CGeneticAlgorithm<int>::bInitialObject(int,double,double,class CKnapsackProblem<int> *)" (?bInitialObject@?$CGeneticAlgorithm@H@@QAE_NHNNPAV?$CKnapsackProblem@H@@@Z)
+D:\PWr\C++\Projects\GeneticAlgorithmTemplate\Debug\GeneticAlgorithmTemplate.exe : fatal error LNK1120: liczba nierozpoznanych elementów zewnętrznych: 3

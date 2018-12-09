@@ -11,8 +11,12 @@ public:
 	bool bInitialObject(double dKnapsackSize, int iItemsCount);
 	bool bSetNewValueOfItm(int iIndex, double iValue);
 	bool bSetNewSizeOfItm(int iIndex, double iSize);
-	double dGetValueFromGen(T * piTable);
-	double dGetSizeFromGen(T * piTable);
+	double dGetValueFromGen(bool * piTable);
+	double dGetValueFromGen(int * piTable);
+	double dGetValueFromGen(double * piTable);
+	double dGetSizeFromGen(bool * piTable);
+	double dGetSizeFromGen(int * piTable);
+	double dGetSizeFromGen(double * piTable);
 
 	int iGetItemsCount();
 	double dGetKnapsackSize();

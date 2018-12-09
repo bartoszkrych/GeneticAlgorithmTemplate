@@ -3,8 +3,8 @@
 #include <iostream>
 #include <chrono>
 
-
-CGeneticAlgorithm::CGeneticAlgorithm()
+template<class T>
+CGeneticAlgorithm<T>::CGeneticAlgorithm()
 {
 	i_population_size = 0;
 	d_mutation_prob = 0;
@@ -14,7 +14,8 @@ CGeneticAlgorithm::CGeneticAlgorithm()
 	pc_best_individual = NULL;
 }
 
-CGeneticAlgorithm::~CGeneticAlgorithm()
+template<class T>
+CGeneticAlgorithm<T>::~CGeneticAlgorithm()
 {
 	for (int i = 0; i<i_population_size; i++)
 	{
@@ -26,8 +27,9 @@ CGeneticAlgorithm::~CGeneticAlgorithm()
 	delete pc_best_individual;
 }
 
-bool CGeneticAlgorithm::bInitialObject(int iPopulationSize, double dMutationProb, double dCrossProb,
-	CKnapsackProblem* cKnapsackProblem)
+template<class T>
+bool CGeneticAlgorithm<T>::bInitialObject(int iPopulationSize, double dMutationProb, double dCrossProb,
+	CKnapsackProblem<T>* cKnapsackProblem)
 {
 	if(dMutationProb >= 0
 		&& dMutationProb <= 1
@@ -39,10 +41,10 @@ bool CGeneticAlgorithm::bInitialObject(int iPopulationSize, double dMutationProb
 		d_mutation_prob = dMutationProb;
 		d_cross_prob = dCrossProb;
 		pc_knapsack_problem = cKnapsackProblem;
-		ppc_tab_population = new CIndividual*[i_population_size];
+		ppc_tab_population = new CIndividual<T>*[i_population_size];
 		for (int i = 0; i < i_population_size; i++)
 		{
-			ppc_tab_population[i] = new CIndividual(pc_knapsack_problem, d_mutation_prob);
+			ppc_tab_population[i] = new CIndividual<T>(pc_knapsack_problem, d_mutation_prob);
 			//ppc_tab_population[i]->vAddAlg(this);
 		}
 
@@ -61,7 +63,8 @@ bool CGeneticAlgorithm::bInitialObject(int iPopulationSize, double dMutationProb
 	return false;
 }
 
-void CGeneticAlgorithm::vStartAlgorithm(double dTime)
+template<class T>
+void CGeneticAlgorithm<T>::vStartAlgorithm(double dTime)
 {
 	int i_iter_population = 0;
 	clock_t start = clock();
@@ -77,9 +80,10 @@ void CGeneticAlgorithm::vStartAlgorithm(double dTime)
 	}
 
 	std::cout <<i_iter_population <<"THE BEST IS: " << std::endl; pc_best_individual->vDisplay();
-}//CGeneticAlgorithm::vGeneratePopulation(int iIter)
+}//CGeneticAlgorithm<T>::vGeneratePopulation(int iIter)
 
-void CGeneticAlgorithm::vGenerateNewPopulation()
+template<class T>
+void CGeneticAlgorithm<T>::vGenerateNewPopulation()
 {
 	std::cout << "###	POP	###"<< std::endl;
 	for (int i = 0; i < i_population_size; i++)
@@ -90,7 +94,7 @@ void CGeneticAlgorithm::vGenerateNewPopulation()
 	int i_random_number2;
 	int i_children_count = 0;
 
-	CIndividual ** pc_new_population = new CIndividual*[i_population_size];
+	CIndividual<T> ** pc_new_population = new CIndividual<T>*[i_population_size];
 
 	while (i_children_count < i_population_size)
 	{
@@ -120,7 +124,7 @@ void CGeneticAlgorithm::vGenerateNewPopulation()
 
 		if (d_crossing <= d_cross_prob)
 		{
-			CIndividual* c_child = (*ppc_tab_population[pi_parents[0]])+ppc_tab_population[pi_parents[1]];
+			CIndividual<T>* c_child = (*ppc_tab_population[pi_parents[0]])+ppc_tab_population[pi_parents[1]];
 			//CIndividual & rc_child = *c_child;
 			//rc_child++;
 			(*c_child)++;
@@ -155,12 +159,14 @@ void CGeneticAlgorithm::vGenerateNewPopulation()
 	bMatchBestIndividual(ppc_tab_population[i_index_best]);
 }
 
-double CGeneticAlgorithm::dGetMutationProb()
+template<class T>
+double CGeneticAlgorithm<T>::dGetMutationProb()
 {
 	return d_mutation_prob;
 }
 
-bool CGeneticAlgorithm::bMatchBestIndividual(CIndividual* cToMatch)
+template<class T>
+bool CGeneticAlgorithm<T>::bMatchBestIndividual(CIndividual<T>* cToMatch)
 {
 	if(cToMatch->dGetFitness()>pc_best_individual->dGetFitness())
 	{
@@ -171,7 +177,8 @@ bool CGeneticAlgorithm::bMatchBestIndividual(CIndividual* cToMatch)
 	return false;
 }
 
-int CGeneticAlgorithm::iGenerateInteger(int iFrom, int iTo)
+template<class T>
+int CGeneticAlgorithm<T>::iGenerateInteger(int iFrom, int iTo)
 {
 	std::random_device rd;  //Will be used to obtain a seed for the random number engine
 	std::mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()
@@ -180,7 +187,8 @@ int CGeneticAlgorithm::iGenerateInteger(int iFrom, int iTo)
 	return dis(gen);
 }
 
-double CGeneticAlgorithm::dGenerateDouble(double dFrom, double dTo)
+template<class T>
+double CGeneticAlgorithm<T>::dGenerateDouble(double dFrom, double dTo)
 {
 	std::random_device rd;  //Will be used to obtain a seed for the random number engine
 	std::mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()

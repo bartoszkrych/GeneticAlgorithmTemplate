@@ -90,24 +90,62 @@ bool CKnapsackProblem<T>::bSetNewSizeOfItm(int iIndex, double iSize)
 	return true;
 }
 
-template<class T>
-double CKnapsackProblem<T>::dGetValueFromGen(T* piTable)
+double CKnapsackProblem<bool>::dGetValueFromGen(bool* piTable)
 {
-	double d_value_gen=0.0;
-	for(int i = 0; i < i_items_count; i++)
+	double d_value_gen = 0.0;
+	for (int i = 0; i < i_items_count; i++)
 	{
-		if (piTable[i] != 0) d_value_gen += ppd_items_table[i][0];
+		if (piTable[i] != false) d_value_gen += ppd_items_table[i][0];
 	}
 	return d_value_gen;
 }
 
-template<class T>
-double CKnapsackProblem<T>::dGetSizeFromGen(T* piTable)
+double CKnapsackProblem<int>::dGetValueFromGen(int* piTable)
+{
+	double d_value_gen = 0.0;
+	for (int i = 0; i < i_items_count; i++)
+	{
+		if (piTable[i] != 0) d_value_gen += (ppd_items_table[i][0])*piTable[i];
+	}
+	return d_value_gen;
+}
+
+double CKnapsackProblem<double>::dGetValueFromGen(double* piTable)
+{
+	double d_value_gen = 0.0;
+	for (int i = 0; i < i_items_count; i++)
+	{
+		if (piTable[i] != 0) d_value_gen += (ppd_items_table[i][0])*piTable[i];
+	}
+	return d_value_gen;
+}
+
+double CKnapsackProblem<bool>::dGetSizeFromGen(bool* piTable)
 {
 	double d_size_gen = 0.0;
 	for (int i = 0; i < i_items_count; i++)
 	{
-		if (piTable[i] != 0) d_size_gen += ppd_items_table[i][1];
+		if (piTable[i] != false) d_size_gen += ppd_items_table[i][1];
+	}
+	return d_size_gen;
+}
+
+double CKnapsackProblem<int>::dGetSizeFromGen(int* piTable)
+{
+	double d_size_gen = 0.0;
+	for (int i = 0; i < i_items_count; i++)
+	{
+		if (piTable[i] != 0) d_size_gen += (ppd_items_table[i][1])*piTable[i];
+	}
+	return d_size_gen;
+}
+
+double CKnapsackProblem<double>::dGetSizeFromGen(double* piTable)
+{
+	double d_size_gen = 0.0;
+	for (int i = 0; i < i_items_count; i++)
+	{
+		if (piTable[i] != 0) d_size_gen += (ppd_items_table[i][1])*piTable[i];
 	}
 	return d_size_gen;
 }
