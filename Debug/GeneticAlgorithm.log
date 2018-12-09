@@ -1,16 +1,130 @@
 ﻿D:\Program Files\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: Katalog pośredni (Debug\) zawiera pliki udostępnione z innego projektu (GeneticAlgorithm.vcxproj). Może to spowodować niepoprawne zachowanie podczas oczyszczania i ponownej kompilacji.
   CGeneticAlgorithm.cpp
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(64): error C2995: "bool CGeneticAlgorithm<T>::bInitialObject(int,double,double,CKnapsackProblem<T> *)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(30): note: zobacz deklarację „CGeneticAlgorithm<T>::bInitialObject”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(83): error C2995: "void CGeneticAlgorithm<T>::vStartAlgorithm(double)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(31): note: zobacz deklarację „CGeneticAlgorithm<T>::vStartAlgorithm”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(160): error C2995: "void CGeneticAlgorithm<T>::vGenerateNewPopulation(void)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(32): note: zobacz deklarację „CGeneticAlgorithm<T>::vGenerateNewPopulation”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(166): error C2995: "double CGeneticAlgorithm<T>::dGetMutationProb(void)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(33): note: zobacz deklarację „CGeneticAlgorithm<T>::dGetMutationProb”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(178): error C2995: "bool CGeneticAlgorithm<T>::bMatchBestIndividual(CIndividual<T> *)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(36): note: zobacz deklarację „CGeneticAlgorithm<T>::bMatchBestIndividual”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(188): error C2995: "int CGeneticAlgorithm<T>::iGenerateInteger(int,int)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(37): note: zobacz deklarację „CGeneticAlgorithm<T>::iGenerateInteger”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(198): error C2995: "double CGeneticAlgorithm<T>::dGenerateDouble(double,double)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(38): note: zobacz deklarację „CGeneticAlgorithm<T>::dGenerateDouble”
   CIndividual.cpp
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(24): error C2995: "CIndividual<T>::CIndividual(CKnapsackProblem<T> *,double)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(8): note: zobacz deklarację „CIndividual<T>::CIndividual”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(43): error C2995: "CIndividual<T>::CIndividual(CKnapsackProblem<T> *,double,T *)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(9): note: zobacz deklarację „CIndividual<T>::CIndividual”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(46): error C2084: funkcja "void CIndividual<int>::vGenerateGens(void)" ma już treść
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(45): note: zobacz poprzednią definicję „vGenerateGens”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(54): error C2084: funkcja "void CIndividual<double>::vGenerateGens(void)" ma już treść
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(53): note: zobacz poprzednią definicję „vGenerateGens”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(62): error C2084: funkcja "void CIndividual<bool>::vGenerateGens(void)" ma już treść
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(61): note: zobacz poprzednią definicję „vGenerateGens”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(73): error C2995: "CIndividual<T>::~CIndividual(void)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(11): note: zobacz deklarację „CIndividual<T>::~CIndividual”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(117): error C2995: "CIndividual<T> *CIndividual<T>::operator +(CIndividual<T> *)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(14): note: zobacz deklarację „CIndividual<T>::operator +”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(127): error C2995: "void CIndividual<T>::operator ++(int)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(15): note: zobacz deklarację „CIndividual<T>::operator ++”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(130): error C2084: funkcja "void CIndividual<int>::vMutationHelper(void)" ma już treść
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(129): note: zobacz poprzednią definicję „vMutationHelper”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(146): error C2084: funkcja "void CIndividual<bool>::vMutationHelper(void)" ma już treść
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(145): note: zobacz poprzednią definicję „vMutationHelper”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(159): error C2084: funkcja "void CIndividual<double>::vMutationHelper(void)" ma już treść
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(158): note: zobacz poprzednią definicję „vMutationHelper”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(178): error C2995: "double CIndividual<T>::dGetFitness(void)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(19): note: zobacz deklarację „CIndividual<T>::dGetFitness”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(184): error C2995: "T CIndividual<T>::iGetGen(int)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(20): note: zobacz deklarację „CIndividual<T>::iGetGen”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(190): error C2995: "double CIndividual<T>::dGetValueGen(void)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(21): note: zobacz deklarację „CIndividual<T>::dGetValueGen”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(201): error C2995: "void CIndividual<T>::vDisplay(void)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(23): note: zobacz deklarację „CIndividual<T>::vDisplay”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(209): error C2995: "void CIndividual<T>::vSetFitness(void)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(25): note: zobacz deklarację „CIndividual<T>::vSetFitness”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(219): error C2995: "int CIndividual<T>::iGenerateInteger(int,int)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(26): note: zobacz deklarację „CIndividual<T>::iGenerateInteger”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(229): error C2995: "double CIndividual<T>::dGenerateDouble(double,double)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(27): note: zobacz deklarację „CIndividual<T>::dGenerateDouble”
   CKnapsackProblem.cpp
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(52): error C2995: "bool CKnapsackProblem<T>::bInitialObject(double,int,double,double)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(26): note: zobacz deklarację „CKnapsackProblem<T>::bInitialObject”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(73): error C2995: "bool CKnapsackProblem<T>::bInitialObject(double,int)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(27): note: zobacz deklarację „CKnapsackProblem<T>::bInitialObject”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(82): error C2995: "bool CKnapsackProblem<T>::bSetNewValueOfItm(int,double)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(28): note: zobacz deklarację „CKnapsackProblem<T>::bSetNewValueOfItm”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(91): error C2995: "bool CKnapsackProblem<T>::bSetNewSizeOfItm(int,double)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(29): note: zobacz deklarację „CKnapsackProblem<T>::bSetNewSizeOfItm”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(94): error C2084: funkcja "double CKnapsackProblem<bool>::dGetValueFromGen(bool *)" ma już treść
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(93): note: zobacz poprzednią definicję „dGetValueFromGen”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(104): error C2084: funkcja "double CKnapsackProblem<int>::dGetValueFromGen(int *)" ma już treść
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(103): note: zobacz poprzednią definicję „dGetValueFromGen”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(114): error C2084: funkcja "double CKnapsackProblem<double>::dGetValueFromGen(double *)" ma już treść
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(113): note: zobacz poprzednią definicję „dGetValueFromGen”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(124): error C2084: funkcja "double CKnapsackProblem<bool>::dGetSizeFromGen(bool *)" ma już treść
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(123): note: zobacz poprzednią definicję „dGetSizeFromGen”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(134): error C2084: funkcja "double CKnapsackProblem<int>::dGetSizeFromGen(int *)" ma już treść
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(133): note: zobacz poprzednią definicję „dGetSizeFromGen”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(144): error C2084: funkcja "double CKnapsackProblem<double>::dGetSizeFromGen(double *)" ma już treść
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(143): note: zobacz poprzednią definicję „dGetSizeFromGen”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(157): error C2995: "int CKnapsackProblem<T>::iGetItemsCount(void)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(37): note: zobacz deklarację „CKnapsackProblem<T>::iGetItemsCount”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(163): error C2995: "double CKnapsackProblem<T>::dGetKnapsackSize(void)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(38): note: zobacz deklarację „CKnapsackProblem<T>::dGetKnapsackSize”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(174): error C2995: "void CKnapsackProblem<T>::vDisplay(void)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(39): note: zobacz deklarację „CKnapsackProblem<T>::vDisplay”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(184): error C2995: "double CKnapsackProblem<T>::dGenerateDouble(double,double)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(42): note: zobacz deklarację „CKnapsackProblem<T>::dGenerateDouble”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(194): error C2995: "int CKnapsackProblem<T>::iGenerateInteger(int,int)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(41): note: zobacz deklarację „CKnapsackProblem<T>::iGenerateInteger”
   main.cpp
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(52): error C2995: "bool CKnapsackProblem<T>::bInitialObject(double,int,double,double)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(26): note: zobacz deklarację „CKnapsackProblem<T>::bInitialObject”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(73): error C2995: "bool CKnapsackProblem<T>::bInitialObject(double,int)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(27): note: zobacz deklarację „CKnapsackProblem<T>::bInitialObject”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(82): error C2995: "bool CKnapsackProblem<T>::bSetNewValueOfItm(int,double)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(28): note: zobacz deklarację „CKnapsackProblem<T>::bSetNewValueOfItm”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(91): error C2995: "bool CKnapsackProblem<T>::bSetNewSizeOfItm(int,double)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(29): note: zobacz deklarację „CKnapsackProblem<T>::bSetNewSizeOfItm”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(94): error C2084: funkcja "double CKnapsackProblem<bool>::dGetValueFromGen(bool *)" ma już treść
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(93): note: zobacz poprzednią definicję „dGetValueFromGen”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(104): error C2084: funkcja "double CKnapsackProblem<int>::dGetValueFromGen(int *)" ma już treść
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(103): note: zobacz poprzednią definicję „dGetValueFromGen”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(114): error C2084: funkcja "double CKnapsackProblem<double>::dGetValueFromGen(double *)" ma już treść
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(113): note: zobacz poprzednią definicję „dGetValueFromGen”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(124): error C2084: funkcja "double CKnapsackProblem<bool>::dGetSizeFromGen(bool *)" ma już treść
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(123): note: zobacz poprzednią definicję „dGetSizeFromGen”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(134): error C2084: funkcja "double CKnapsackProblem<int>::dGetSizeFromGen(int *)" ma już treść
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(133): note: zobacz poprzednią definicję „dGetSizeFromGen”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(144): error C2084: funkcja "double CKnapsackProblem<double>::dGetSizeFromGen(double *)" ma już treść
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(143): note: zobacz poprzednią definicję „dGetSizeFromGen”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(157): error C2995: "int CKnapsackProblem<T>::iGetItemsCount(void)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(37): note: zobacz deklarację „CKnapsackProblem<T>::iGetItemsCount”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(163): error C2995: "double CKnapsackProblem<T>::dGetKnapsackSize(void)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(38): note: zobacz deklarację „CKnapsackProblem<T>::dGetKnapsackSize”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(174): error C2995: "void CKnapsackProblem<T>::vDisplay(void)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(39): note: zobacz deklarację „CKnapsackProblem<T>::vDisplay”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(184): error C2995: "double CKnapsackProblem<T>::dGenerateDouble(double,double)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(42): note: zobacz deklarację „CKnapsackProblem<T>::dGenerateDouble”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(194): error C2995: "int CKnapsackProblem<T>::iGenerateInteger(int,int)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(41): note: zobacz deklarację „CKnapsackProblem<T>::iGenerateInteger”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(64): error C2995: "bool CGeneticAlgorithm<T>::bInitialObject(int,double,double,CKnapsackProblem<T> *)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(30): note: zobacz deklarację „CGeneticAlgorithm<T>::bInitialObject”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(83): error C2995: "void CGeneticAlgorithm<T>::vStartAlgorithm(double)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(31): note: zobacz deklarację „CGeneticAlgorithm<T>::vStartAlgorithm”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(160): error C2995: "void CGeneticAlgorithm<T>::vGenerateNewPopulation(void)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(32): note: zobacz deklarację „CGeneticAlgorithm<T>::vGenerateNewPopulation”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(166): error C2995: "double CGeneticAlgorithm<T>::dGetMutationProb(void)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(33): note: zobacz deklarację „CGeneticAlgorithm<T>::dGetMutationProb”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(178): error C2995: "bool CGeneticAlgorithm<T>::bMatchBestIndividual(CIndividual<T> *)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(36): note: zobacz deklarację „CGeneticAlgorithm<T>::bMatchBestIndividual”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(188): error C2995: "int CGeneticAlgorithm<T>::iGenerateInteger(int,int)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(37): note: zobacz deklarację „CGeneticAlgorithm<T>::iGenerateInteger”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(198): error C2995: "double CGeneticAlgorithm<T>::dGenerateDouble(double,double)": szablon funkcji został już zdefiniowany
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(38): note: zobacz deklarację „CGeneticAlgorithm<T>::dGenerateDouble”
   Generowanie kodu...
-main.obj : error LNK2005: Element "public: double __thiscall CKnapsackProblem<int>::dGetSizeFromGen(int *)" (?dGetSizeFromGen@?$CKnapsackProblem@H@@QAENPAH@Z) jest już zdefiniowany w elemencie CKnapsackProblem.obj
-main.obj : error LNK2005: Element "public: double __thiscall CKnapsackProblem<double>::dGetSizeFromGen(double *)" (?dGetSizeFromGen@?$CKnapsackProblem@N@@QAENPAN@Z) jest już zdefiniowany w elemencie CKnapsackProblem.obj
-main.obj : error LNK2005: Element "public: double __thiscall CKnapsackProblem<bool>::dGetSizeFromGen(bool *)" (?dGetSizeFromGen@?$CKnapsackProblem@_N@@QAENPA_N@Z) jest już zdefiniowany w elemencie CKnapsackProblem.obj
-main.obj : error LNK2005: Element "public: double __thiscall CKnapsackProblem<int>::dGetValueFromGen(int *)" (?dGetValueFromGen@?$CKnapsackProblem@H@@QAENPAH@Z) jest już zdefiniowany w elemencie CKnapsackProblem.obj
-main.obj : error LNK2005: Element "public: double __thiscall CKnapsackProblem<double>::dGetValueFromGen(double *)" (?dGetValueFromGen@?$CKnapsackProblem@N@@QAENPAN@Z) jest już zdefiniowany w elemencie CKnapsackProblem.obj
-main.obj : error LNK2005: Element "public: double __thiscall CKnapsackProblem<bool>::dGetValueFromGen(bool *)" (?dGetValueFromGen@?$CKnapsackProblem@_N@@QAENPA_N@Z) jest już zdefiniowany w elemencie CKnapsackProblem.obj
-main.obj : error LNK2019: nierozpoznany zewnętrzny symbol "public: __thiscall CIndividual<int>::CIndividual<int>(class CKnapsackProblem<int> *,double)" (??0?$CIndividual@H@@QAE@PAV?$CKnapsackProblem@H@@N@Z) przywołany w funkcji "public: bool __thiscall CGeneticAlgorithm<int>::bInitialObject(int,double,double,class CKnapsackProblem<int> *)" (?bInitialObject@?$CGeneticAlgorithm@H@@QAE_NHNNPAV?$CKnapsackProblem@H@@@Z)
-main.obj : error LNK2019: nierozpoznany zewnętrzny symbol "public: __thiscall CIndividual<int>::~CIndividual<int>(void)" (??1?$CIndividual@H@@QAE@XZ) przywołany w funkcji "public: void * __thiscall CIndividual<int>::`scalar deleting destructor'(unsigned int)" (??_G?$CIndividual@H@@QAEPAXI@Z)
-main.obj : error LNK2019: nierozpoznany zewnętrzny symbol "public: double __thiscall CIndividual<int>::dGetFitness(void)" (?dGetFitness@?$CIndividual@H@@QAENXZ) przywołany w funkcji "public: bool __thiscall CGeneticAlgorithm<int>::bInitialObject(int,double,double,class CKnapsackProblem<int> *)" (?bInitialObject@?$CGeneticAlgorithm@H@@QAE_NHNNPAV?$CKnapsackProblem@H@@@Z)
-D:\PWr\C++\Projects\GeneticAlgorithmTemplate\Debug\GeneticAlgorithmTemplate.exe : fatal error LNK1120: liczba nierozpoznanych elementów zewnętrznych: 3

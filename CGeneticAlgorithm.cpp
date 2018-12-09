@@ -2,7 +2,7 @@
 #include <random>
 #include <iostream>
 #include <chrono>
-
+/*
 template<class T>
 CGeneticAlgorithm<T>::CGeneticAlgorithm()
 {
@@ -26,7 +26,7 @@ CGeneticAlgorithm<T>::~CGeneticAlgorithm()
 	delete[] ppc_tab_population;
 	delete pc_best_individual;
 }
-
+*/
 template<class T>
 bool CGeneticAlgorithm<T>::bInitialObject(int iPopulationSize, double dMutationProb, double dCrossProb,
 	CKnapsackProblem<T>* cKnapsackProblem)

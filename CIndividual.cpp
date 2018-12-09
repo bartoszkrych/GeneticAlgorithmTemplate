@@ -1,6 +1,5 @@
 #include "CIndividual.h"
 #include <random>
-#include "CGeneticAlgorithm.h"
 #include <iostream>
 using namespace std;
 

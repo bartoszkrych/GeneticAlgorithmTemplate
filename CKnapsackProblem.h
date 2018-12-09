@@ -1,11 +1,27 @@
 #pragma once
+#include <cstddef>
 
 template<class T>
 class CKnapsackProblem
 {
 public:
-	CKnapsackProblem();
-	~CKnapsackProblem();
+	CKnapsackProblem()
+	{
+		d_knapsack_size = 0;
+		i_items_count = 0;
+
+		ppd_items_table = NULL;
+	}
+
+	~CKnapsackProblem()
+	{
+		for (int i = 0; i < i_items_count; i++)
+		{
+			delete[] ppd_items_table[i];
+		}
+
+		delete[] ppd_items_table;
+	}
 
 	bool bInitialObject(double dKnapsackSize, int iItemsCount, double dMaxValueItm, double dMaxSizeItm);
 	bool bInitialObject(double dKnapsackSize, int iItemsCount);
@@ -29,3 +45,4 @@ private:
 	double ** ppd_items_table;
 };
 
+#include "CKnapsackProblem.cpp"

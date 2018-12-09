@@ -6,8 +6,26 @@ template<class T>
 class CGeneticAlgorithm
 {
 public:
-	CGeneticAlgorithm();
-	~CGeneticAlgorithm();
+	CGeneticAlgorithm()
+	{
+		i_population_size = 0;
+		d_mutation_prob = 0;
+		d_cross_prob = 0;
+		pc_knapsack_problem = NULL;
+		ppc_tab_population = NULL;
+		pc_best_individual = NULL;
+	}
+	~CGeneticAlgorithm()
+{
+	for (int i = 0; i<i_population_size; i++)
+	{
+		if(ppc_tab_population[i]!=pc_best_individual)
+		delete ppc_tab_population[i];
+	}
+
+	delete[] ppc_tab_population;
+	delete pc_best_individual;
+}
 
 	bool bInitialObject(int iPopulationSize, double dMutationProb, double dCrossProb, CKnapsackProblem<T> * cKnapsackProblem);
 	void vStartAlgorithm(double dTime);
@@ -27,4 +45,4 @@ private:
 	CIndividual<T> * pc_best_individual;
 	CKnapsackProblem<T> * pc_knapsack_problem;
 };
-
+#include "CGeneticAlgorithm.cpp"

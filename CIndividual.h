@@ -36,3 +36,4 @@ private:
 	CKnapsackProblem<T>* c_knapsack;
 };
 
+#include "CIndividual.cpp"
