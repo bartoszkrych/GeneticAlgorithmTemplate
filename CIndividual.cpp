@@ -4,33 +4,35 @@
 #include <iostream>
 using namespace std;
 
+#define DEFAULT_COUNT_GEN 3
+#define DEFAULT_MUTATION_VALUE 2
 
-CIndividual::CIndividual(CKnapsackProblem* cKnapsack, double dMutationProb)
+
+template<class T>
+CIndividual<T>::CIndividual(CKnapsackProblem<T>* cKnapsack, double dMutationProb)
 {
 	c_knapsack = cKnapsack;
 	i_count_gen = c_knapsack->iGetItemsCount();
 	d_mutation_prob = dMutationProb;
 	d_fitness = 0;
 
-	pi_genotype = new int[i_count_gen];
-	for (int i = 0; i < i_count_gen; i++)
-	{
-		pi_genotype[i] = iGenerateInteger(0, 1);
-	}
+	pi_genotype = new T[i_count_gen];
+	vGenerateGens();
 	vSetFitness();
 
 	d_size_gen = c_knapsack->dGetSizeFromGen(pi_genotype);
 	d_value_gen = c_knapsack->dGetValueFromGen(pi_genotype);
 }
 
-CIndividual::CIndividual(CKnapsackProblem* cKnapsack, double dMutationProb, int* piTable)
+template<class T>
+CIndividual<T>::CIndividual(CKnapsackProblem<T>* cKnapsack, double dMutationProb, T* piTable)
 {
 	c_knapsack = cKnapsack;
 	i_count_gen = c_knapsack->iGetItemsCount();
 	d_mutation_prob = dMutationProb;
 	d_fitness = 0;
 
-	pi_genotype = new int[i_count_gen];
+	pi_genotype = new T[i_count_gen];
 	for (int i = 0; i < i_count_gen; i++)
 	{
 		pi_genotype[i] = piTable[i];
@@ -41,65 +43,44 @@ CIndividual::CIndividual(CKnapsackProblem* cKnapsack, double dMutationProb, int*
 	d_value_gen = c_knapsack->dGetValueFromGen(pi_genotype);
 }
 
-CIndividual::~CIndividual()
+void CIndividual<int>::vGenerateGens()
+{
+	for (int i = 0; i < i_count_gen; i++)
+	{
+		pi_genotype[i] = iGenerateInteger(0, DEFAULT_COUNT_GEN);
+	}
+}
+
+void CIndividual<double>::vGenerateGens()
+{
+	for (int i = 0; i < i_count_gen; i++)
+	{
+		pi_genotype[i] = dGenerateDouble(0, DEFAULT_COUNT_GEN);
+	}
+}
+
+void CIndividual<bool>::vGenerateGens()
+{
+	for (int i = 0; i < i_count_gen; i++)
+	{
+		pi_genotype[i] = iGenerateInteger(0, 1);
+	}
+}
+
+template<class T>
+CIndividual<T>::~CIndividual()
 {
 	delete[] pi_genotype;
 }
 
-void CIndividual::vMutation(double dMutationProb)
-{
-	for(int i = 0; i < i_count_gen; i++)
-	{
-		double d_number = dGenerateDouble(0.0, 1.0);
-		if(!(d_number>dMutationProb))
-		{
-			pi_genotype[i] = (pi_genotype[i] + 1) % 2;
-		}
-	}
-	d_fitness = 0;
-	vSetFitness();
-	d_size_gen = c_knapsack->dGetSizeFromGen(pi_genotype);
-	d_value_gen = c_knapsack->dGetValueFromGen(pi_genotype);
-
-}
-
-std::vector<CIndividual*> CIndividual::vCrossing(CIndividual* cSecondParent)
-{
-	vector<CIndividual*> v_children(0);
-	int i_index_part = iGenerateInteger(1, i_count_gen - 1);
-	int ** pi_table = new int*[2];
-	pi_table[0] = new int[i_count_gen];
-	pi_table[1] = new int[i_count_gen];
-	for(int j = 0; j<i_count_gen; j++)
-	{
-		if (j < i_index_part) 
-		{
-			pi_table[0][j] = iGetGen(j);
-			pi_table[1][j] = cSecondParent->iGetGen(j);
-		}else
-		{
-			pi_table[0][j] = cSecondParent->iGetGen(j);
-			pi_table[1][j] = iGetGen(j);
-		}
-	}
-	v_children.push_back(new CIndividual(c_knapsack, d_mutation_prob, pi_table[0]));
-	v_children.push_back(new CIndividual(c_knapsack, d_mutation_prob, pi_table[1]));
-
-	for(int i = 0; i < 2; i++)
-	{
-		delete[] pi_table[i];
-	}
-	delete[] pi_table;
-	return v_children;
-}
-
-CIndividual* CIndividual::operator+(CIndividual* pcOther)
+template<class T>
+CIndividual<T>* CIndividual<T>::operator+(CIndividual* pcOther)
 {
 
 	int i_index_part = iGenerateInteger(1, i_count_gen - 1);
-	int ** pi_table = new int*[2];
-	pi_table[0] = new int[i_count_gen];
-	pi_table[1] = new int[i_count_gen];
+	T ** pi_table = new T*[2];
+	pi_table[0] = new T[i_count_gen];
+	pi_table[1] = new T[i_count_gen];
 	for (int j = 0; j < i_count_gen; j++)
 	{
 		if (j < i_index_part)
@@ -136,38 +117,81 @@ CIndividual* CIndividual::operator+(CIndividual* pcOther)
 	return  child;
 }
 
-void CIndividual::operator++(int)
+template<class T>
+void CIndividual<T>::operator++(int)
 {
-	for (int i = 0; i < i_count_gen; i++)
-	{
-		double d_number = dGenerateDouble(0.0, 1.0);
-		if (!(d_number > d_mutation_prob))
-		{
-			pi_genotype[i] = (pi_genotype[i] + 1) % 2;
-		}
-	}
+	vMutationHelper();
 	d_fitness = 0;
 	vSetFitness();
 	d_size_gen = c_knapsack->dGetSizeFromGen(pi_genotype);
 	d_value_gen = c_knapsack->dGetValueFromGen(pi_genotype);
 }
 
-double CIndividual::dGetFitness()
+void CIndividual<int>::vMutationHelper()
+{
+	int i_mutation_value = 0;
+	double d_number = 0;
+	for (int i = 0; i < i_count_gen; i++)
+	{
+		d_number = dGenerateDouble(0.0, 1.0);
+		if (!(d_number > d_mutation_prob))
+		{
+			i_mutation_value = iGenerateInteger((DEFAULT_MUTATION_VALUE)*(-1), DEFAULT_MUTATION_VALUE);
+			pi_genotype[i] = pi_genotype[i] + i_mutation_value;
+			if (pi_genotype[i] < 0) pi_genotype[i] = 0;
+		}//if (!(d_number > d_mutation_prob))
+	}//for (int i = 0; i < i_count_gen; i++)
+}
+
+void CIndividual<bool>::vMutationHelper()
+{
+	double d_number = 0;
+	for (int i = 0; i < i_count_gen; i++)
+	{
+		d_number = dGenerateDouble(0.0, 1.0);
+		if (!(d_number > d_mutation_prob))
+		{
+			pi_genotype[i] = !(pi_genotype[i]) ;
+		}//if (!(d_number > d_mutation_prob))
+	}//for (int i = 0; i < i_count_gen; i++)
+}
+
+void CIndividual<double>::vMutationHelper()
+{
+	double d_mutation_value = 0;
+	double d_number = 0;
+	for (int i = 0; i < i_count_gen; i++)
+	{
+		d_number = dGenerateDouble(0.0, 1.0);
+		if (!(d_number > d_mutation_prob))
+		{
+			d_mutation_value = dGenerateDouble((DEFAULT_MUTATION_VALUE)*(-1), DEFAULT_MUTATION_VALUE);
+			pi_genotype[i] = pi_genotype[i] + d_mutation_value;
+			if (pi_genotype[i] < 0) pi_genotype[i] = 0;
+		}//if (!(d_number > d_mutation_prob))
+	}//for (int i = 0; i < i_count_gen; i++)
+}
+
+template<class T>
+double CIndividual<T>::dGetFitness()
 {
 	return d_fitness;
 }
 
-int CIndividual::iGetGen(int iIndex)
+template<class T>
+T CIndividual<T>::iGetGen(int iIndex)
 {
 	return pi_genotype[iIndex];
 }
 
-double CIndividual::dGetValueGen()
+template<class T>
+double CIndividual<T>::dGetValueGen()
 {
 	return d_value_gen;
 }
 
-void CIndividual::vDisplay()
+template<class T>
+void CIndividual<T>::vDisplay()
 {
 	cout << "Fitness:	" << d_fitness <<"	Size:		" << d_size_gen<< "	[";
 	for (int j = 0; j < i_count_gen - 1; j++)
@@ -177,14 +201,16 @@ void CIndividual::vDisplay()
 	cout << pi_genotype[i_count_gen - 1] << "]" << endl;
 }
 
-void CIndividual::vSetFitness()
+template<class T>
+void CIndividual<T>::vSetFitness()
 {
 	double d_size_gen = c_knapsack->dGetSizeFromGen(pi_genotype);
 
 	if (d_size_gen <= c_knapsack->dGetKnapsackSize()) d_fitness = c_knapsack->dGetValueFromGen(pi_genotype);
 }
 
-int CIndividual::iGenerateInteger(int iFrom, int iTo)
+template<class T>
+int CIndividual<T>::iGenerateInteger(int iFrom, int iTo)
 {
 	std::random_device rd;  //Will be used to obtain a seed for the random number engine
 	mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()
@@ -193,7 +219,8 @@ int CIndividual::iGenerateInteger(int iFrom, int iTo)
 	return dis(gen);
 }
 
-double CIndividual::dGenerateDouble(double dFrom, double dTo)
+template<class T>
+double CIndividual<T>::dGenerateDouble(double dFrom, double dTo)
 {
 	std::random_device rd;  //Will be used to obtain a seed for the random number engine
 	std::mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()

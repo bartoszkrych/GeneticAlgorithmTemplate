@@ -16,7 +16,6 @@ public:
 
 	int iGetItemsCount();
 	double dGetKnapsackSize();
-
 	void vDisplay();
 private:
 	int iGenerateInteger(int iFrom, int iTo);

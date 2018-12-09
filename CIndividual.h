@@ -1,23 +1,23 @@
 #pragma once
 #include "CKnapsackProblem.h"
-#include <vector>
 
+template<class T>
 class CIndividual
 {
 public:
-	CIndividual(CKnapsackProblem* cKnapsack, double dMutationProb);
-	CIndividual(CKnapsackProblem* cKnapsack, double dMutationProb, int * piTable);
+	CIndividual(CKnapsackProblem<T>* cKnapsack, double dMutationProb);
+	CIndividual(CKnapsackProblem<T>* cKnapsack, double dMutationProb, T * piTable);
+	void vGenerateGens();
 	~CIndividual();
 
-	void vMutation(double dMutationProb);
-	std::vector<CIndividual*> vCrossing(CIndividual* cSecondParent);
 
 	CIndividual* operator+(CIndividual * pcOther);
 	void operator++(int);
+	void vMutationHelper();
 	
 
 	double dGetFitness();
-	int iGetGen(int iIndex);
+	T iGetGen(int iIndex);
 	double dGetValueGen();
 
 	void vDisplay();
@@ -26,13 +26,13 @@ private:
 	int iGenerateInteger(int iFrom, int iTo);
 	double dGenerateDouble(double dFrom, double dTo);
 
-	int * pi_genotype;
+	T * pi_genotype;
 	int i_count_gen;
 	double d_fitness;
 	double d_value_gen;
 	double d_size_gen;
 	double d_mutation_prob;
 
-	CKnapsackProblem* c_knapsack;
+	CKnapsackProblem<T>* c_knapsack;
 };
 

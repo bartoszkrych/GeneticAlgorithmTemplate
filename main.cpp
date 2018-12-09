@@ -20,7 +20,7 @@ int main()
 	double d_item_max_size = 3.13;
 
 
-	CKnapsackProblem * c_knap = new CKnapsackProblem();
+	CKnapsackProblem<double> * c_knap = new CKnapsackProblem<double>();
 
 	if(c_knap->bInitialObject(d_capacity_knap, i_item_count, d_item_max_value, d_item_max_size))
 	{
