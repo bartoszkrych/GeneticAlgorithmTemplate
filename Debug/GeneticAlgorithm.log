@@ -1,130 +1,271 @@
 ﻿D:\Program Files\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: Katalog pośredni (Debug\) zawiera pliki udostępnione z innego projektu (GeneticAlgorithm.vcxproj). Może to spowodować niepoprawne zachowanie podczas oczyszczania i ponownej kompilacji.
   CGeneticAlgorithm.cpp
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(64): error C2995: "bool CGeneticAlgorithm<T>::bInitialObject(int,double,double,CKnapsackProblem<T> *)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(30): note: zobacz deklarację „CGeneticAlgorithm<T>::bInitialObject”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(83): error C2995: "void CGeneticAlgorithm<T>::vStartAlgorithm(double)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(31): note: zobacz deklarację „CGeneticAlgorithm<T>::vStartAlgorithm”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(160): error C2995: "void CGeneticAlgorithm<T>::vGenerateNewPopulation(void)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(32): note: zobacz deklarację „CGeneticAlgorithm<T>::vGenerateNewPopulation”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(166): error C2995: "double CGeneticAlgorithm<T>::dGetMutationProb(void)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(33): note: zobacz deklarację „CGeneticAlgorithm<T>::dGetMutationProb”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(178): error C2995: "bool CGeneticAlgorithm<T>::bMatchBestIndividual(CIndividual<T> *)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(36): note: zobacz deklarację „CGeneticAlgorithm<T>::bMatchBestIndividual”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(188): error C2995: "int CGeneticAlgorithm<T>::iGenerateInteger(int,int)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(37): note: zobacz deklarację „CGeneticAlgorithm<T>::iGenerateInteger”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(198): error C2995: "double CGeneticAlgorithm<T>::dGenerateDouble(double,double)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(38): note: zobacz deklarację „CGeneticAlgorithm<T>::dGenerateDouble”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(30): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(30): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(30): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(30): error C2039: „bInitialObject”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(32): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(32): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(66): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(66): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(66): error C2182: "CGeneticAlgorithm": niedozwolone użycie typu "void"
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(66): error C2371: "CGeneticAlgorithm": zmiana definicji; różne typy podstawowe
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(30): note: zobacz deklarację „CGeneticAlgorithm”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(66): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(66): error C2039: „vStartAlgorithm”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(67): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(67): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(85): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(85): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(85): error C2182: "CGeneticAlgorithm": niedozwolone użycie typu "void"
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(85): error C2371: "CGeneticAlgorithm": zmiana definicji; różne typy podstawowe
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(30): note: zobacz deklarację „CGeneticAlgorithm”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(85): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(85): error C2039: „vGenerateNewPopulation”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(86): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(86): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(162): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(162): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(162): error C2371: "CGeneticAlgorithm": zmiana definicji; różne typy podstawowe
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(30): note: zobacz deklarację „CGeneticAlgorithm”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(162): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(162): error C2039: „dGetMutationProb”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(163): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(163): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(168): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(168): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(168): error C2374: "CGeneticAlgorithm": zmiana definicji; wielokrotna inicjalizacja
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(30): note: zobacz deklarację „CGeneticAlgorithm”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(168): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(168): error C2039: „bMatchBestIndividual”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(169): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(169): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(180): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(180): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(180): error C2371: "CGeneticAlgorithm": zmiana definicji; różne typy podstawowe
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(30): note: zobacz deklarację „CGeneticAlgorithm”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(180): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(180): error C2039: „iGenerateInteger”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(181): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(181): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(190): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(190): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(190): error C2371: "CGeneticAlgorithm": zmiana definicji; różne typy podstawowe
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(30): note: zobacz deklarację „CGeneticAlgorithm”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(190): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(190): error C2039: „dGenerateDouble”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(191): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(191): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
   CIndividual.cpp
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(24): error C2995: "CIndividual<T>::CIndividual(CKnapsackProblem<T> *,double)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(8): note: zobacz deklarację „CIndividual<T>::CIndividual”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(43): error C2995: "CIndividual<T>::CIndividual(CKnapsackProblem<T> *,double,T *)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(9): note: zobacz deklarację „CIndividual<T>::CIndividual”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(46): error C2084: funkcja "void CIndividual<int>::vGenerateGens(void)" ma już treść
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(45): note: zobacz poprzednią definicję „vGenerateGens”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(54): error C2084: funkcja "void CIndividual<double>::vGenerateGens(void)" ma już treść
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(53): note: zobacz poprzednią definicję „vGenerateGens”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(62): error C2084: funkcja "void CIndividual<bool>::vGenerateGens(void)" ma już treść
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(61): note: zobacz poprzednią definicję „vGenerateGens”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(73): error C2995: "CIndividual<T>::~CIndividual(void)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(11): note: zobacz deklarację „CIndividual<T>::~CIndividual”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(117): error C2995: "CIndividual<T> *CIndividual<T>::operator +(CIndividual<T> *)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(14): note: zobacz deklarację „CIndividual<T>::operator +”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(127): error C2995: "void CIndividual<T>::operator ++(int)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(15): note: zobacz deklarację „CIndividual<T>::operator ++”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(130): error C2084: funkcja "void CIndividual<int>::vMutationHelper(void)" ma już treść
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(129): note: zobacz poprzednią definicję „vMutationHelper”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(146): error C2084: funkcja "void CIndividual<bool>::vMutationHelper(void)" ma już treść
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(145): note: zobacz poprzednią definicję „vMutationHelper”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(159): error C2084: funkcja "void CIndividual<double>::vMutationHelper(void)" ma już treść
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(158): note: zobacz poprzednią definicję „vMutationHelper”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(178): error C2995: "double CIndividual<T>::dGetFitness(void)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(19): note: zobacz deklarację „CIndividual<T>::dGetFitness”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(184): error C2995: "T CIndividual<T>::iGetGen(int)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(20): note: zobacz deklarację „CIndividual<T>::iGetGen”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(190): error C2995: "double CIndividual<T>::dGetValueGen(void)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(21): note: zobacz deklarację „CIndividual<T>::dGetValueGen”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(201): error C2995: "void CIndividual<T>::vDisplay(void)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(23): note: zobacz deklarację „CIndividual<T>::vDisplay”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(209): error C2995: "void CIndividual<T>::vSetFitness(void)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(25): note: zobacz deklarację „CIndividual<T>::vSetFitness”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(219): error C2995: "int CIndividual<T>::iGenerateInteger(int,int)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(26): note: zobacz deklarację „CIndividual<T>::iGenerateInteger”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(229): error C2995: "double CIndividual<T>::dGenerateDouble(double,double)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.h(27): note: zobacz deklarację „CIndividual<T>::dGenerateDouble”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(10): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(10): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(10): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(10): error C2039: „CIndividual”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(11): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(11): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(26): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(26): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(26): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(26): error C2039: „CIndividual”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(27): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(27): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(44): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(44): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(44): error C2039: „vGenerateGens”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(45): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(45): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(52): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(52): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(52): error C2039: „vGenerateGens”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(53): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(53): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(60): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(60): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(60): error C2039: „vGenerateGens”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(61): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(61): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(69): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(69): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(69): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(69): error C2523: „::~CIndividual”: niezgodność tagu destruktor
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(69): error C2039: „CIndividual”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(70): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(70): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(75): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(75): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(75): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(76): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(76): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(119): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(119): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(119): error C2182: "CIndividual": niedozwolone użycie typu "void"
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(119): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(119): error C2039: „++”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(120): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(120): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(128): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(128): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(128): error C2039: „vMutationHelper”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(129): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(129): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(144): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(144): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(144): error C2039: „vMutationHelper”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(145): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(145): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(157): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(157): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(157): error C2039: „vMutationHelper”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(158): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(158): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(174): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(174): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(174): error C2371: "CIndividual": zmiana definicji; różne typy podstawowe
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(119): note: zobacz deklarację „CIndividual”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(174): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(174): error C2039: „dGetFitness”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(175): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(175): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(180): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(180): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(180): error C2371: "CIndividual": zmiana definicji; różne typy podstawowe
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(119): note: zobacz deklarację „CIndividual”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(180): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(180): error C2039: „iGetGen”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(181): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(181): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(186): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(186): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(186): error C2371: "CIndividual": zmiana definicji; różne typy podstawowe
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(119): note: zobacz deklarację „CIndividual”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(186): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(186): error C2039: „dGetValueGen”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(187): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(187): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(192): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(192): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(192): error C2182: "CIndividual": niedozwolone użycie typu "void"
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(192): error C2374: "CIndividual": zmiana definicji; wielokrotna inicjalizacja
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(119): note: zobacz deklarację „CIndividual”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(192): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(192): error C2039: „vDisplay”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(193): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(193): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(203): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(203): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(203): error C2182: "CIndividual": niedozwolone użycie typu "void"
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(203): error C2374: "CIndividual": zmiana definicji; wielokrotna inicjalizacja
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(119): note: zobacz deklarację „CIndividual”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(203): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(203): error C2039: „vSetFitness”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(204): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(204): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(211): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(211): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(211): error C2374: "CIndividual": zmiana definicji; wielokrotna inicjalizacja
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(119): note: zobacz deklarację „CIndividual”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cindividual.cpp(211): fatal error C1003: Licznik błędów przekracza 100; zatrzymywanie kompilacji
   CKnapsackProblem.cpp
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(52): error C2995: "bool CKnapsackProblem<T>::bInitialObject(double,int,double,double)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(26): note: zobacz deklarację „CKnapsackProblem<T>::bInitialObject”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(73): error C2995: "bool CKnapsackProblem<T>::bInitialObject(double,int)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(27): note: zobacz deklarację „CKnapsackProblem<T>::bInitialObject”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(82): error C2995: "bool CKnapsackProblem<T>::bSetNewValueOfItm(int,double)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(28): note: zobacz deklarację „CKnapsackProblem<T>::bSetNewValueOfItm”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(91): error C2995: "bool CKnapsackProblem<T>::bSetNewSizeOfItm(int,double)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(29): note: zobacz deklarację „CKnapsackProblem<T>::bSetNewSizeOfItm”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(94): error C2084: funkcja "double CKnapsackProblem<bool>::dGetValueFromGen(bool *)" ma już treść
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(93): note: zobacz poprzednią definicję „dGetValueFromGen”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(104): error C2084: funkcja "double CKnapsackProblem<int>::dGetValueFromGen(int *)" ma już treść
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(103): note: zobacz poprzednią definicję „dGetValueFromGen”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(114): error C2084: funkcja "double CKnapsackProblem<double>::dGetValueFromGen(double *)" ma już treść
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(113): note: zobacz poprzednią definicję „dGetValueFromGen”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(124): error C2084: funkcja "double CKnapsackProblem<bool>::dGetSizeFromGen(bool *)" ma już treść
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(123): note: zobacz poprzednią definicję „dGetSizeFromGen”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(134): error C2084: funkcja "double CKnapsackProblem<int>::dGetSizeFromGen(int *)" ma już treść
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(133): note: zobacz poprzednią definicję „dGetSizeFromGen”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(144): error C2084: funkcja "double CKnapsackProblem<double>::dGetSizeFromGen(double *)" ma już treść
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(143): note: zobacz poprzednią definicję „dGetSizeFromGen”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(157): error C2995: "int CKnapsackProblem<T>::iGetItemsCount(void)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(37): note: zobacz deklarację „CKnapsackProblem<T>::iGetItemsCount”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(163): error C2995: "double CKnapsackProblem<T>::dGetKnapsackSize(void)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(38): note: zobacz deklarację „CKnapsackProblem<T>::dGetKnapsackSize”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(174): error C2995: "void CKnapsackProblem<T>::vDisplay(void)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(39): note: zobacz deklarację „CKnapsackProblem<T>::vDisplay”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(184): error C2995: "double CKnapsackProblem<T>::dGenerateDouble(double,double)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(42): note: zobacz deklarację „CKnapsackProblem<T>::dGenerateDouble”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(194): error C2995: "int CKnapsackProblem<T>::iGenerateInteger(int,int)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(41): note: zobacz deklarację „CKnapsackProblem<T>::iGenerateInteger”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(32): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(32): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(32): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(32): error C2039: „bInitialObject”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(33): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(33): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(55): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(55): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(55): error C2374: "CKnapsackProblem": zmiana definicji; wielokrotna inicjalizacja
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(32): note: zobacz deklarację „CKnapsackProblem”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(55): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(55): error C2039: „bInitialObject”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(56): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(56): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(76): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(76): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(76): error C2374: "CKnapsackProblem": zmiana definicji; wielokrotna inicjalizacja
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(32): note: zobacz deklarację „CKnapsackProblem”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(76): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(76): error C2039: „bSetNewValueOfItm”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(77): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(77): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(85): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(85): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(85): error C2374: "CKnapsackProblem": zmiana definicji; wielokrotna inicjalizacja
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(32): note: zobacz deklarację „CKnapsackProblem”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(85): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(85): error C2039: „bSetNewSizeOfItm”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(86): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(86): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(93): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(93): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(93): error C2039: „dGetValueFromGen”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(94): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(94): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(103): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(103): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(103): error C2039: „dGetValueFromGen”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(104): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(104): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(113): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(113): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(113): error C2039: „dGetValueFromGen”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(114): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(114): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(123): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(123): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(123): error C2039: „dGetSizeFromGen”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(124): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(124): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(133): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(133): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(133): error C2039: „dGetSizeFromGen”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(134): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(134): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(143): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(143): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(143): error C2039: „dGetSizeFromGen”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(144): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(144): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(154): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(154): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(154): error C2371: "CKnapsackProblem": zmiana definicji; różne typy podstawowe
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(32): note: zobacz deklarację „CKnapsackProblem”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(154): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(154): error C2039: „iGetItemsCount”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(155): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(155): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(160): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(160): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(160): error C2371: "CKnapsackProblem": zmiana definicji; różne typy podstawowe
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(32): note: zobacz deklarację „CKnapsackProblem”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(160): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(160): error C2039: „dGetKnapsackSize”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(161): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(161): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(166): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(166): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(166): error C2182: "CKnapsackProblem": niedozwolone użycie typu "void"
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(166): error C2371: "CKnapsackProblem": zmiana definicji; różne typy podstawowe
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(32): note: zobacz deklarację „CKnapsackProblem”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(166): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(166): error C2039: „vDisplay”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(167): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(167): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(177): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(177): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(177): error C2371: "CKnapsackProblem": zmiana definicji; różne typy podstawowe
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(32): note: zobacz deklarację „CKnapsackProblem”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(177): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(177): error C2039: „dGenerateDouble”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(178): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(178): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(187): error C2988: nierozpoznana deklaracja/definicja szablonu
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(187): error C2143: błąd składniowy: brakuje „;” przed „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(187): error C2371: "CKnapsackProblem": zmiana definicji; różne typy podstawowe
+  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(32): note: zobacz deklarację „CKnapsackProblem”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(187): error C2059: błąd składniowy: „<”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(187): error C2039: „iGenerateInteger”: Nie jest składową „`global namespace'”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(188): error C2143: błąd składniowy: brakuje „;” przed „{”
+d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(188): error C2447: "{": brak nagłówka funkcji (stary styl formalnej listy?)
   main.cpp
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(52): error C2995: "bool CKnapsackProblem<T>::bInitialObject(double,int,double,double)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(26): note: zobacz deklarację „CKnapsackProblem<T>::bInitialObject”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(73): error C2995: "bool CKnapsackProblem<T>::bInitialObject(double,int)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(27): note: zobacz deklarację „CKnapsackProblem<T>::bInitialObject”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(82): error C2995: "bool CKnapsackProblem<T>::bSetNewValueOfItm(int,double)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(28): note: zobacz deklarację „CKnapsackProblem<T>::bSetNewValueOfItm”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(91): error C2995: "bool CKnapsackProblem<T>::bSetNewSizeOfItm(int,double)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(29): note: zobacz deklarację „CKnapsackProblem<T>::bSetNewSizeOfItm”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(94): error C2084: funkcja "double CKnapsackProblem<bool>::dGetValueFromGen(bool *)" ma już treść
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(93): note: zobacz poprzednią definicję „dGetValueFromGen”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(104): error C2084: funkcja "double CKnapsackProblem<int>::dGetValueFromGen(int *)" ma już treść
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(103): note: zobacz poprzednią definicję „dGetValueFromGen”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(114): error C2084: funkcja "double CKnapsackProblem<double>::dGetValueFromGen(double *)" ma już treść
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(113): note: zobacz poprzednią definicję „dGetValueFromGen”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(124): error C2084: funkcja "double CKnapsackProblem<bool>::dGetSizeFromGen(bool *)" ma już treść
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(123): note: zobacz poprzednią definicję „dGetSizeFromGen”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(134): error C2084: funkcja "double CKnapsackProblem<int>::dGetSizeFromGen(int *)" ma już treść
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(133): note: zobacz poprzednią definicję „dGetSizeFromGen”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(144): error C2084: funkcja "double CKnapsackProblem<double>::dGetSizeFromGen(double *)" ma już treść
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(143): note: zobacz poprzednią definicję „dGetSizeFromGen”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(157): error C2995: "int CKnapsackProblem<T>::iGetItemsCount(void)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(37): note: zobacz deklarację „CKnapsackProblem<T>::iGetItemsCount”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(163): error C2995: "double CKnapsackProblem<T>::dGetKnapsackSize(void)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(38): note: zobacz deklarację „CKnapsackProblem<T>::dGetKnapsackSize”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(174): error C2995: "void CKnapsackProblem<T>::vDisplay(void)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(39): note: zobacz deklarację „CKnapsackProblem<T>::vDisplay”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(184): error C2995: "double CKnapsackProblem<T>::dGenerateDouble(double,double)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(42): note: zobacz deklarację „CKnapsackProblem<T>::dGenerateDouble”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.cpp(194): error C2995: "int CKnapsackProblem<T>::iGenerateInteger(int,int)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cknapsackproblem.h(41): note: zobacz deklarację „CKnapsackProblem<T>::iGenerateInteger”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(64): error C2995: "bool CGeneticAlgorithm<T>::bInitialObject(int,double,double,CKnapsackProblem<T> *)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(30): note: zobacz deklarację „CGeneticAlgorithm<T>::bInitialObject”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(83): error C2995: "void CGeneticAlgorithm<T>::vStartAlgorithm(double)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(31): note: zobacz deklarację „CGeneticAlgorithm<T>::vStartAlgorithm”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(160): error C2995: "void CGeneticAlgorithm<T>::vGenerateNewPopulation(void)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(32): note: zobacz deklarację „CGeneticAlgorithm<T>::vGenerateNewPopulation”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(166): error C2995: "double CGeneticAlgorithm<T>::dGetMutationProb(void)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(33): note: zobacz deklarację „CGeneticAlgorithm<T>::dGetMutationProb”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(178): error C2995: "bool CGeneticAlgorithm<T>::bMatchBestIndividual(CIndividual<T> *)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(36): note: zobacz deklarację „CGeneticAlgorithm<T>::bMatchBestIndividual”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(188): error C2995: "int CGeneticAlgorithm<T>::iGenerateInteger(int,int)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(37): note: zobacz deklarację „CGeneticAlgorithm<T>::iGenerateInteger”
-d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.cpp(198): error C2995: "double CGeneticAlgorithm<T>::dGenerateDouble(double,double)": szablon funkcji został już zdefiniowany
-  d:\pwr\c++\projects\geneticalgorithmtemplate\geneticalgorithmtemplate\cgeneticalgorithm.h(38): note: zobacz deklarację „CGeneticAlgorithm<T>::dGenerateDouble”
   Generowanie kodu...

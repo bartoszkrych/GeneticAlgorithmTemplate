@@ -1,4 +1,3 @@
-#include "CIndividual.h"
 #include <random>
 #include <iostream>
 using namespace std;

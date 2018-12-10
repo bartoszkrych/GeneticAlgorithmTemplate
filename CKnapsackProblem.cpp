@@ -1,4 +1,4 @@
-#include "CKnapsackProblem.h"
+
 #include <random>
 #include <iostream>
 

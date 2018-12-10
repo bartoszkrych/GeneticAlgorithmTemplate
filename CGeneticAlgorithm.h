@@ -45,4 +45,5 @@ private:
 	CIndividual<T> * pc_best_individual;
 	CKnapsackProblem<T> * pc_knapsack_problem;
 };
+
 #include "CGeneticAlgorithm.cpp"

@@ -1,4 +1,3 @@
-#include "CGeneticAlgorithm.h"
 #include <random>
 #include <iostream>
 #include <chrono>
@@ -27,6 +26,7 @@ CGeneticAlgorithm<T>::~CGeneticAlgorithm()
 	delete pc_best_individual;
 }
 */
+
 template<class T>
 bool CGeneticAlgorithm<T>::bInitialObject(int iPopulationSize, double dMutationProb, double dCrossProb,
 	CKnapsackProblem<T>* cKnapsackProblem)
