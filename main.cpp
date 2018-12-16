@@ -5,12 +5,6 @@
 #include "Commands.h"
 using namespace std;
 
-
-#define _CRTDBG_MAP_ALLOC
-#include <cstdlib>
-#include <crtdbg.h>
-
-
 int main()
 {
 	int i_population_size = 5;
@@ -37,6 +31,5 @@ int main()
 	delete c_main;
 	cout << endl;
 	system("pause");
-	_CrtDumpMemoryLeaks();
 	return 0;
 }
