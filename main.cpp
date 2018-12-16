@@ -19,25 +19,24 @@ int main()
 	double d_item_max_value = 5.81;
 	double d_item_max_size = 3.13;
 
-	CKnapsackProblem<int> * c_knap = new CKnapsackProblem<int>();
+	CKnapsackProblem<bool> * c_knap = new CKnapsackProblem<bool>();
 
 	if(c_knap->bInitialObject(d_capacity_knap, i_item_count, d_item_max_value, d_item_max_size))
 	{
-		CGeneticAlgorithm<int> * c_ga = new CGeneticAlgorithm<int>();
+		CGeneticAlgorithm<bool> * c_ga = new CGeneticAlgorithm<bool>();
 
 		if(c_ga->bInitialObject(i_population_size, d_mutation_prob, d_cross_prob, c_knap))
 		{
-			//c_knap->vDisplay();
+			c_knap->vDisplay();
 			//c_ga->vGenerateNewPopulation();
-			//c_ga->vStartAlgorithm(d_seconds);
+			c_ga->vStartAlgorithm(d_seconds);
 
-			delete c_ga;
 		}
 		else
 		{
 			cout << "Something wrong with your genetic algorithm. Check your data!"<<endl;
-			delete c_ga;
 		}// ELSE if(c_ga->bInitialObject(i_population_size, d_mutation_prob, d_cross_prob, c_knap))
+		delete c_ga;
 	}
 	else
 	{

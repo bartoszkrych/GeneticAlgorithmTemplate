@@ -1,5 +1,13 @@
 #pragma once
 #include <cstddef>
+#include <random>
+#include <iostream>
+
+using namespace std;
+
+#define DEFAULT_SIZE 4
+#define DEFAULT_VALUES 5
+#define DEFAULT_KNAPSACK 7
 
 template<class T>
 class CKnapsackProblem
@@ -27,13 +35,16 @@ public:
 	bool bInitialObject(double dKnapsackSize, int iItemsCount);
 	bool bSetNewValueOfItm(int iIndex, double iValue);
 	bool bSetNewSizeOfItm(int iIndex, double iSize);
-	double dGetValueFromGen(bool * piTable);
-	double dGetValueFromGen(int * piTable);
-	double dGetValueFromGen(double * piTable);
-	double dGetSizeFromGen(bool * piTable);
-	double dGetSizeFromGen(int * piTable);
-	double dGetSizeFromGen(double * piTable);
+	double dGetValueFromGen(T * piTable);
+	//double dGetValueFromGen(int * piTable);
+	//double dGetValueFromGen(double * piTable);
+	double dGetSizeFromGen(T * piTable);
+	//double dGetSizeFromGen(int * piTable);
+	//double dGetSizeFromGen(double * piTable);
 
+	double dTest(T tTest) { return(0); };
+
+	
 	int iGetItemsCount();
 	double dGetKnapsackSize();
 	void vDisplay();
@@ -45,4 +56,7 @@ private:
 	double ** ppd_items_table;
 };
 
-#include "CKnapsackProblem.cpp"
+
+template<>  double CKnapsackProblem<int>::dTest(int tTest) { return(1); };
+
+#include "CKnapsackProblem.hpp"

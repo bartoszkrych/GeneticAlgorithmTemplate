@@ -1,12 +1,6 @@
 
-#include <random>
-#include <iostream>
 
-using namespace std;
 
-#define DEFAULT_SIZE 4
-#define DEFAULT_VALUES 5
-#define DEFAULT_KNAPSACK 7
 /*
 template<class T>
 CKnapsackProblem<T>::CKnapsackProblem()
@@ -28,6 +22,8 @@ CKnapsackProblem<T>::~CKnapsackProblem()
 	delete[] ppd_items_table;
 }
 */
+
+/*
 template<class T>
 bool CKnapsackProblem<T>::bInitialObject(double dKnapsackSize, int iItemsCount, double dMaxValueItm, double dMaxSizeItm)
 {
@@ -193,4 +189,4 @@ int CKnapsackProblem<T>::iGenerateInteger(int iFrom, int iTo)
 	return dis(gen);
 }
 
-
+*/

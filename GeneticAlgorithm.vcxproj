@@ -116,15 +116,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CGeneticAlgorithm.cpp" />
-    <ClCompile Include="CIndividual.cpp" />
-    <ClCompile Include="CKnapsackProblem.cpp" />
+    <ClCompile Include="CGeneticAlgorithm__.hpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CGeneticAlgorithm.h" />
-    <ClInclude Include="CIndividual.h" />
     <ClInclude Include="CKnapsackProblem.h" />
+    <ClInclude Include="CKnapsackProblem.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

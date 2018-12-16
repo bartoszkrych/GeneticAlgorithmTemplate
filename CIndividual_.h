@@ -1,4 +1,4 @@
-#pragma once
+/*#pragma once
 #include "CKnapsackProblem.h"
 
 template<class T>
@@ -36,4 +36,6 @@ private:
 	CKnapsackProblem<T>* c_knapsack;
 };
 
-#include "CIndividual.cpp"
+#include "CIndividual.hpp"
+
+*/

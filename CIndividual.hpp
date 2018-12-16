@@ -1,9 +1,6 @@
-#include <random>
-#include <iostream>
+/*
 using namespace std;
 
-#define DEFAULT_COUNT_GEN 3
-#define DEFAULT_MUTATION_VALUE 2
 
 
 template<class T>
@@ -227,3 +224,4 @@ double CIndividual<T>::dGenerateDouble(double dFrom, double dTo)
 	return dis(gen);
 }
 
+*/

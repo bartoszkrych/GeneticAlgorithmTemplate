@@ -18,13 +18,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="CKnapsackProblem.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="CGeneticAlgorithm.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="CIndividual.cpp">
+    <ClCompile Include="CGeneticAlgorithm__.hpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,8 +29,8 @@
     <ClInclude Include="CGeneticAlgorithm.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="CIndividual.h">
-      <Filter>Pliki nagłówkowe</Filter>
+    <ClInclude Include="CKnapsackProblem.hpp">
+      <Filter>Pliki źródłowe</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
