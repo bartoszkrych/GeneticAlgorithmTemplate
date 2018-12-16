@@ -117,12 +117,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CGeneticAlgorithm__.hpp" />
+    <ClCompile Include="Commands.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MenuCommand.cpp" />
+    <ClCompile Include="MyMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CGeneticAlgorithm.h" />
     <ClInclude Include="CKnapsackProblem.h" />
     <ClInclude Include="CKnapsackProblem.hpp" />
+    <ClInclude Include="Commands.h" />
+    <ClInclude Include="MenuCommand.h" />
+    <ClInclude Include="MenuItem.h" />
+    <ClInclude Include="MyCommand.h" />
+    <ClInclude Include="MyMenu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,11 +1,15 @@
 #include <iostream>
 #include <random>
-#include "CKnapsackProblem.h"
-#include "CGeneticAlgorithm.h"
-#define _CRTDBG_MAP_ALLOC
-#include <stdlib.h>  
-#include <crtdbg.h>
+#include "MyMenu.h"
+#include "MenuCommand.h"
+#include "Commands.h"
 using namespace std;
+
+
+#define _CRTDBG_MAP_ALLOC
+#include <cstdlib>
+#include <crtdbg.h>
+
 
 int main()
 {
@@ -14,39 +18,25 @@ int main()
 	double d_mutation_prob = 0.2;
 
 	double d_seconds=2;
+
 	double d_capacity_knap = 5.32;
 	int i_item_count = 5;
 	double d_item_max_value = 5.81;
 	double d_item_max_size = 3.13;
 
-	CKnapsackProblem<bool> * c_knap = new CKnapsackProblem<bool>();
+	CMyMenu* c_main = new CMyMenu("Main", "main");
 
-	if(c_knap->bInitialObject(d_capacity_knap, i_item_count, d_item_max_value, d_item_max_size))
-	{
-		CGeneticAlgorithm<bool> * c_ga = new CGeneticAlgorithm<bool>();
+	 CMenuCommand * c_algorithm = new CMenuCommand("Start genetic algorithm.","start",
+		new CommandGA<int>(i_population_size,d_mutation_prob,d_cross_prob,
+		d_capacity_knap,i_item_count,d_item_max_value,d_item_max_size,d_seconds),
+		"genetic algorithm");
 
-		if(c_ga->bInitialObject(i_population_size, d_mutation_prob, d_cross_prob, c_knap))
-		{
-			c_knap->vDisplay();
-			//c_ga->vGenerateNewPopulation();
-			c_ga->vStartAlgorithm(d_seconds);
+	c_main->vAddItem(c_algorithm);
+	c_main->vRun();
 
-		}
-		else
-		{
-			cout << "Something wrong with your genetic algorithm. Check your data!"<<endl;
-		}// ELSE if(c_ga->bInitialObject(i_population_size, d_mutation_prob, d_cross_prob, c_knap))
-		delete c_ga;
-	}
-	else
-	{
-		cout << "Something wrong with your knapsack problem. Check your data!" << endl;
-	} //ELSE if(c_knap->bInitialObject(d_capacity_knap, i_item_count, d_item_max_value, d_item_max_size))
-
-	delete c_knap;
-
-	_CrtDumpMemoryLeaks();
+	delete c_main;
+	cout << endl;
 	system("pause");
-	
+	_CrtDumpMemoryLeaks();
 	return 0;
 }

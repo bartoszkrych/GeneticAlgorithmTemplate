@@ -36,11 +36,7 @@ public:
 	bool bSetNewValueOfItm(int iIndex, double iValue);
 	bool bSetNewSizeOfItm(int iIndex, double iSize);
 	double dGetValueFromGen(T * piTable);
-	//double dGetValueFromGen(int * piTable);
-	//double dGetValueFromGen(double * piTable);
 	double dGetSizeFromGen(T * piTable);
-	//double dGetSizeFromGen(int * piTable);
-	//double dGetSizeFromGen(double * piTable);
 
 	double dTest(T tTest) { return(0); };
 
@@ -54,6 +50,10 @@ private:
 	double d_knapsack_size;
 	int i_items_count;
 	double ** ppd_items_table;
+	int i_population_size;
+	double d_mutation_prob;
+	double d_cross_prob;
+
 };
 
 
