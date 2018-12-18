@@ -7,11 +7,14 @@
 #define DEFAULT_MUTATION_VALUE 1
 
 template<class T>
+class CGeneticAlgorithm;
+
+template<class T>
 class CIndividual
 {
 public:
-	CIndividual(CKnapsackProblem<T>* cKnapsack, double dMutationProb);
-	CIndividual(CKnapsackProblem<T>* cKnapsack, double dMutationProb, T * piTable);
+	CIndividual(CKnapsackProblem<T>* cKnapsack, CGeneticAlgorithm<T>* cGA);
+	CIndividual(CKnapsackProblem<T>* cKnapsack, CGeneticAlgorithm<T>* cGA, T * piTable);
 	void vGenerateGens();
 	~CIndividual();
 
@@ -36,8 +39,8 @@ private:
 	double d_fitness;
 	double d_value_gen;
 	double d_size_gen;
-	double d_mutation_prob;
 
+	CGeneticAlgorithm<T>* c_genetic_algorithm;
 	CKnapsackProblem<T>* c_knapsack;
 };
 
@@ -106,7 +109,7 @@ bool CGeneticAlgorithm<T>::bInitialObject(int iPopulationSize, double dMutationP
 		ppc_tab_population = new CIndividual<T>*[i_population_size];
 		for (int i = 0; i < i_population_size; i++)
 		{
-			ppc_tab_population[i] = new CIndividual<T>(pc_knapsack_problem, d_mutation_prob);
+			ppc_tab_population[i] = new CIndividual<T>(pc_knapsack_problem, this);
 			//ppc_tab_population[i]->vAddAlg(this);
 		}
 
@@ -265,11 +268,11 @@ double CGeneticAlgorithm<T>::dGenerateDouble(double dFrom, double dTo)
 
 
 template<class T>
-CIndividual<T>::CIndividual(CKnapsackProblem<T>* cKnapsack, double dMutationProb)
+CIndividual<T>::CIndividual(CKnapsackProblem<T>* cKnapsack, CGeneticAlgorithm<T>* cGA)
 {
 	c_knapsack = cKnapsack;
 	i_count_gen = c_knapsack->iGetItemsCount();
-	d_mutation_prob = dMutationProb;
+	c_genetic_algorithm = cGA;
 	d_fitness = 0;
 
 	pi_genotype = new T[i_count_gen];
@@ -281,11 +284,11 @@ CIndividual<T>::CIndividual(CKnapsackProblem<T>* cKnapsack, double dMutationProb
 }
 
 template<class T>
-CIndividual<T>::CIndividual(CKnapsackProblem<T>* cKnapsack, double dMutationProb, T* piTable)
+CIndividual<T>::CIndividual(CKnapsackProblem<T>* cKnapsack, CGeneticAlgorithm<T>* cGA, T* piTable)
 {
 	c_knapsack = cKnapsack;
 	i_count_gen = c_knapsack->iGetItemsCount();
-	d_mutation_prob = dMutationProb;
+	c_genetic_algorithm = cGA;
 	d_fitness = 0;
 
 	pi_genotype = new T[i_count_gen];
@@ -332,7 +335,6 @@ CIndividual<T>::~CIndividual()
 template<class T>
 CIndividual<T>* CIndividual<T>::operator+(CIndividual* pcOther)
 {
-
 	int i_index_part = iGenerateInteger(1, i_count_gen - 1);
 	T ** pi_table = new T*[2];
 	pi_table[0] = new T[i_count_gen];
@@ -350,8 +352,8 @@ CIndividual<T>* CIndividual<T>::operator+(CIndividual* pcOther)
 			pi_table[1][j] = iGetGen(j);
 		}
 	}
-	CIndividual* c_first = new CIndividual(c_knapsack, d_mutation_prob, pi_table[0]);
-	CIndividual* c_sec = new CIndividual(c_knapsack, d_mutation_prob, pi_table[1]);
+	CIndividual* c_first = new CIndividual(c_knapsack, c_genetic_algorithm, pi_table[0]);
+	CIndividual* c_sec = new CIndividual(c_knapsack, c_genetic_algorithm, pi_table[1]);
 
 	CIndividual* child;
 
@@ -387,10 +389,11 @@ void CIndividual<int>::vMutationHelper()
 {
 	int i_mutation_value = 0;
 	double d_number = 0;
+	double d_mut = c_genetic_algorithm->dGetMutationProb();
 	for (int i = 0; i < i_count_gen; i++)
 	{
 		d_number = dGenerateDouble(0.0, 1.0);
-		if (!(d_number > d_mutation_prob))
+		if (!(d_number >d_mut))
 		{
 			i_mutation_value = iGenerateInteger((DEFAULT_MUTATION_VALUE)*(-1), DEFAULT_MUTATION_VALUE);
 			pi_genotype[i] = pi_genotype[i] + i_mutation_value;
@@ -405,7 +408,7 @@ void CIndividual<bool>::vMutationHelper()
 	for (int i = 0; i < i_count_gen; i++)
 	{
 		d_number = dGenerateDouble(0.0, 1.0);
-		if (!(d_number > d_mutation_prob))
+		if (!(d_number > c_genetic_algorithm->dGetMutationProb()))
 		{
 			pi_genotype[i] = !(pi_genotype[i]);
 		}//if (!(d_number > d_mutation_prob))
@@ -419,7 +422,7 @@ void CIndividual<double>::vMutationHelper()
 	for (int i = 0; i < i_count_gen; i++)
 	{
 		d_number = dGenerateDouble(0.0, 1.0);
-		if (!(d_number > d_mutation_prob))
+		if (!(d_number > c_genetic_algorithm->dGetMutationProb()))
 		{
 			d_mutation_value = dGenerateDouble((DEFAULT_MUTATION_VALUE)*(-1), DEFAULT_MUTATION_VALUE);
 			pi_genotype[i] = pi_genotype[i] + d_mutation_value;
