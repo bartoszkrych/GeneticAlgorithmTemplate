@@ -38,8 +38,6 @@ public:
 	double dGetValueFromGen(T * piTable);
 	double dGetSizeFromGen(T * piTable);
 
-	double dTest(T tTest) { return(0); };
-
 	
 	int iGetItemsCount();
 	double dGetKnapsackSize();
@@ -50,13 +48,7 @@ private:
 	double d_knapsack_size;
 	int i_items_count;
 	double ** ppd_items_table;
-	int i_population_size;
-	double d_mutation_prob;
-	double d_cross_prob;
 
 };
-
-
-template<>  double CKnapsackProblem<int>::dTest(int tTest) { return(1); };
 
 #include "CKnapsackProblem.hpp"

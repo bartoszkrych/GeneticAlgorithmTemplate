@@ -131,12 +131,10 @@ bool CGeneticAlgorithm<T>::bInitialObject(int iPopulationSize, double dMutationP
 template<class T>
 void CGeneticAlgorithm<T>::vStartAlgorithm(double dTime)
 {
-	int i_iter_population = 0;
 	clock_t start = clock();
 	while (((double)clock() - start) / CLOCKS_PER_SEC < dTime)
 	{
 		vGenerateNewPopulation();
-		i_iter_population++;
 	}
 	std::cout << "###	LAST POP	###" << std::endl;
 	for (int i = 0; i < i_population_size; i++)
@@ -144,7 +142,7 @@ void CGeneticAlgorithm<T>::vStartAlgorithm(double dTime)
 		ppc_tab_population[i]->vDisplay();
 	}
 
-	std::cout << i_iter_population << "THE BEST IS: " << std::endl; pc_best_individual->vDisplay();
+	std::cout << "THE BEST IS: " << std::endl; pc_best_individual->vDisplay();
 }//CGeneticAlgorithm<T>::vGeneratePopulation(int iIter)
 
 template<class T>
