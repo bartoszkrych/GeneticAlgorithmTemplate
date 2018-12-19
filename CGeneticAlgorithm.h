@@ -40,8 +40,8 @@ private:
 	double d_value_gen;
 	double d_size_gen;
 
-	CGeneticAlgorithm<T>* c_genetic_algorithm;
-	CKnapsackProblem<T>* c_knapsack;
+	CGeneticAlgorithm<T>* pc_genetic_algorithm;
+	CKnapsackProblem<T>* pc_knapsack;
 };
 
 template<class T>
@@ -270,25 +270,25 @@ double CGeneticAlgorithm<T>::dGenerateDouble(double dFrom, double dTo)
 template<class T>
 CIndividual<T>::CIndividual(CKnapsackProblem<T>* cKnapsack, CGeneticAlgorithm<T>* cGA)
 {
-	c_knapsack = cKnapsack;
-	i_count_gen = c_knapsack->iGetItemsCount();
-	c_genetic_algorithm = cGA;
+	pc_knapsack = cKnapsack;
+	i_count_gen = pc_knapsack->iGetItemsCount();
+	pc_genetic_algorithm = cGA;
 	d_fitness = 0;
 
 	pi_genotype = new T[i_count_gen];
 	vGenerateGens();
 	vSetFitness();
 
-	d_size_gen = c_knapsack->dGetSizeFromGen(pi_genotype);
-	d_value_gen = c_knapsack->dGetValueFromGen(pi_genotype);
+	d_size_gen = pc_knapsack->dGetSizeFromGen(pi_genotype);
+	d_value_gen = pc_knapsack->dGetValueFromGen(pi_genotype);
 }
 
 template<class T>
 CIndividual<T>::CIndividual(CKnapsackProblem<T>* cKnapsack, CGeneticAlgorithm<T>* cGA, T* piTable)
 {
-	c_knapsack = cKnapsack;
-	i_count_gen = c_knapsack->iGetItemsCount();
-	c_genetic_algorithm = cGA;
+	pc_knapsack = cKnapsack;
+	i_count_gen = pc_knapsack->iGetItemsCount();
+	pc_genetic_algorithm = cGA;
 	d_fitness = 0;
 
 	pi_genotype = new T[i_count_gen];
@@ -298,8 +298,8 @@ CIndividual<T>::CIndividual(CKnapsackProblem<T>* cKnapsack, CGeneticAlgorithm<T>
 	}
 	vSetFitness();
 
-	d_size_gen = c_knapsack->dGetSizeFromGen(pi_genotype);
-	d_value_gen = c_knapsack->dGetValueFromGen(pi_genotype);
+	d_size_gen = pc_knapsack->dGetSizeFromGen(pi_genotype);
+	d_value_gen = pc_knapsack->dGetValueFromGen(pi_genotype);
 }
 
 void CIndividual<int>::vGenerateGens()
@@ -352,8 +352,8 @@ CIndividual<T>* CIndividual<T>::operator+(CIndividual* pcOther)
 			pi_table[1][j] = iGetGen(j);
 		}
 	}
-	CIndividual* c_first = new CIndividual(c_knapsack, c_genetic_algorithm, pi_table[0]);
-	CIndividual* c_sec = new CIndividual(c_knapsack, c_genetic_algorithm, pi_table[1]);
+	CIndividual* c_first = new CIndividual(pc_knapsack, pc_genetic_algorithm, pi_table[0]);
+	CIndividual* c_sec = new CIndividual(pc_knapsack, pc_genetic_algorithm, pi_table[1]);
 
 	CIndividual* child;
 
@@ -381,19 +381,18 @@ void CIndividual<T>::operator++(int)
 	vMutationHelper();
 	d_fitness = 0;
 	vSetFitness();
-	d_size_gen = c_knapsack->dGetSizeFromGen(pi_genotype);
-	d_value_gen = c_knapsack->dGetValueFromGen(pi_genotype);
+	d_size_gen = pc_knapsack->dGetSizeFromGen(pi_genotype);
+	d_value_gen = pc_knapsack->dGetValueFromGen(pi_genotype);
 }
 
 void CIndividual<int>::vMutationHelper()
 {
 	int i_mutation_value = 0;
 	double d_number = 0;
-	double d_mut = c_genetic_algorithm->dGetMutationProb();
 	for (int i = 0; i < i_count_gen; i++)
 	{
 		d_number = dGenerateDouble(0.0, 1.0);
-		if (!(d_number >d_mut))
+		if (!(d_number > pc_genetic_algorithm->dGetMutationProb()))
 		{
 			i_mutation_value = iGenerateInteger((DEFAULT_MUTATION_VALUE)*(-1), DEFAULT_MUTATION_VALUE);
 			pi_genotype[i] = pi_genotype[i] + i_mutation_value;
@@ -408,7 +407,7 @@ void CIndividual<bool>::vMutationHelper()
 	for (int i = 0; i < i_count_gen; i++)
 	{
 		d_number = dGenerateDouble(0.0, 1.0);
-		if (!(d_number > c_genetic_algorithm->dGetMutationProb()))
+		if (!(d_number > pc_genetic_algorithm->dGetMutationProb()))
 		{
 			pi_genotype[i] = !(pi_genotype[i]);
 		}//if (!(d_number > d_mutation_prob))
@@ -422,7 +421,7 @@ void CIndividual<double>::vMutationHelper()
 	for (int i = 0; i < i_count_gen; i++)
 	{
 		d_number = dGenerateDouble(0.0, 1.0);
-		if (!(d_number > c_genetic_algorithm->dGetMutationProb()))
+		if (!(d_number > pc_genetic_algorithm->dGetMutationProb()))
 		{
 			d_mutation_value = dGenerateDouble((DEFAULT_MUTATION_VALUE)*(-1), DEFAULT_MUTATION_VALUE);
 			pi_genotype[i] = pi_genotype[i] + d_mutation_value;
@@ -463,9 +462,9 @@ void CIndividual<T>::vDisplay()
 template<class T>
 void CIndividual<T>::vSetFitness()
 {
-	double d_size_gen = c_knapsack->dGetSizeFromGen(pi_genotype);
+	double d_size_gen = pc_knapsack->dGetSizeFromGen(pi_genotype);
 
-	if (d_size_gen <= c_knapsack->dGetKnapsackSize()) d_fitness = c_knapsack->dGetValueFromGen(pi_genotype);
+	if (d_size_gen <= pc_knapsack->dGetKnapsackSize()) d_fitness = pc_knapsack->dGetValueFromGen(pi_genotype);
 }
 
 template<class T>

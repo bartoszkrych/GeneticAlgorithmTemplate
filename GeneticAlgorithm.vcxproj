@@ -116,7 +116,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CGeneticAlgorithm__.hpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuCommand.cpp" />
     <ClCompile Include="MyMenu.cpp" />

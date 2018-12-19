@@ -48,7 +48,7 @@ bool CKnapsackProblem<T>::bInitialObject(double dKnapsackSize, int iItemsCount)
 template<class T>
 bool CKnapsackProblem<T>::bSetNewValueOfItm(int iIndex, double iValue)
 {
-	if (iIndex >= d_knapsack_size || iIndex < 0) return false;
+	if (iIndex >= i_items_count || iIndex < 0) return false;
 
 	ppd_items_table[iIndex][0] = round(iValue * 100) / 100;
 	return true;
@@ -57,7 +57,7 @@ bool CKnapsackProblem<T>::bSetNewValueOfItm(int iIndex, double iValue)
 template<class T>
 bool CKnapsackProblem<T>::bSetNewSizeOfItm(int iIndex, double iSize)
 {
-	if (iIndex >= d_knapsack_size || iIndex < 0) return false;
+	if (iIndex >= i_items_count || iIndex < 0) return false;
 
 	ppd_items_table[iIndex][1] = round(iSize * 100) / 100;
 	return true;
